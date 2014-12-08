@@ -1,0 +1,105 @@
+<div class="jumbotron">
+  <h1>Some final questions</h1>
+  <p>...</p>
+</div>
+
+<%= form_tag '/frame_experiment/awareness', method: :put do %>
+
+
+
+    <div class="control-group radio_buttons optional lead">
+      <label class="radio_buttons optional control-label">
+
+        I have never attended an academic course in my entered life.
+      </label>
+
+      <div class="control">
+
+
+        <%= radio_button_tag(:academic, "1") %>
+        <%= label_tag(:academic_1, "Strongly disagree") %>
+
+
+        <%= radio_button_tag(:academic, "2") %>
+        <%= label_tag(:academic_2, "Disagree") %>
+
+
+        <%= radio_button_tag(:academic, "3") %>
+        <%= label_tag(:academic_3, "Neither agree nor disagree") %>
+
+
+        <%= radio_button_tag(:academic, "4") %>
+        <%= label_tag(:academic_4, "Agree") %>
+
+
+        <%= radio_button_tag(:academic, "5") %>
+        <%= label_tag(:academic_5, "Strongly Agree") %>
+      </div>
+    </div>
+    <br/>
+
+
+    <div class="control-group radio_buttons optional lead">
+      <label class="radio_buttons optional control-label">
+
+        Which website did you trust the most to perform the activity you performed?
+      </label>
+
+      <div class="control">
+
+
+        <%= radio_button_tag(:trust, "jam") %>
+        <%= label_tag(:trust_jam, "JamShare Data") %>
+        <br/>
+        <%= radio_button_tag(:trust, "cite") %>
+        <%= label_tag(:trust_cite, "Cite DataLabour") %>
+
+
+      </div>
+    </div>
+    <br/>
+
+
+
+    <div class="control-group radio_buttons optional lead">
+      <label class="radio_buttons optional control-label">
+
+        Some sentences appeared in the upload form in the websites you visited, can you identify any of them?
+      </label>
+
+      <div class="control">
+
+        <%= check_box_tag(:awareness, "1") %>
+        <%= label_tag(:awareness_1, "77% of the community makes their materials citable within 3 years.") %>
+        <br/>
+
+        <%= check_box_tag(:awareness, "2") %>
+        <%= label_tag(:awareness_2, "69% the community shares their materials") %>
+        <br/>
+
+
+        <%= check_box_tag(:awareness, "3") %>
+        <%= label_tag(:awareness_3, "Publicly available data is significantly associated with a 69% increase in citations.") %>
+
+
+      </div>
+    </div>
+    <br/>
+
+
+
+    <div class="form-group lead">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="honest" name="honest" data-error="Before you wreck yourself">
+          In your honest opinion, should we use your responses in our analyses in this study?
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+    <%= submit_tag  'Continue', class:"btn btn-primary btn-lg" %>
+
+
+<% end %>
+

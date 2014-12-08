@@ -1,0 +1,5 @@
+# Logfile created on 2014-11-17 12:19:51 +0000 by logger.rb/1.2.8
+logged data: {"name":"FramingExp","time":1416226791,"salt":"FramingExp","inputs":{"userid":"Jose","sessionid":"framed_string","age":61},"params":{"template1":"normal.html","template2":"framed.html"},"event":"exposure"}
+logged data: {"name":"FramingExp","time":1416227193,"salt":"FramingExp","inputs":{"userid":"Jose","sessionid":"framed_string","age":2},"params":{"template1":"normal.html","template2":"framed.html"},"event":"exposure"}
+logged data: {"name":"FramingExp","time":1416227201,"salt":"FramingExp","inputs":{"userid":"Jose","sessionid":"framed_string","age":161},"params":{"template1":"normal.html","template2":"framed.html"},"event":"exposure"}
+logged data: {"name":"FramingExp","time":1416227219,"salt":"FramingExp","inputs":{"userid":"Jose","sessionid":"framed_string","age":223},"params":{"template1":"normal.html","template2":"framed.html"},"event":"exposure"}

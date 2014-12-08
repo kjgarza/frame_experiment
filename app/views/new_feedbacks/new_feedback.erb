@@ -1,0 +1,75 @@
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+
+<div>
+
+<!--<div class="col-md-8">-->
+    <h3>Your Datasets</h3>
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th class="col-md-1">#</th>
+        <th class="col-md-2">Dataset</th>
+        <th class="col-md-3">Creators</th>
+        <th class="col-md-1">Sharing Preferences</th>
+        <th class="col-md-2"><%= Planout.instance.get[:template][:link_title]-%></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% cas = recently_added_item_logs_hash(25.years.ago, 8) -%>
+          <%= display_single_new_item(cas[0], 'added') -%>
+      <tr class="danger">
+        <td>2</td>
+        <td>Comparison of BY4741 and W303 deletion mutants (nha1, ena1-4/5)</td>
+        <td>Katie Jennings, Alex Draper</td>
+        <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+        <td></td>
+      </tr>
+      <tr class="danger">
+        <td>3</td>
+        <td>RNA-seq delta greA</td>
+        <td>Alex Draper, Manuela Sanger, Ellis Leach </td>
+        <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  <!--</div>-->
+
+
+
+    <!--<div class="col-md-8">-->
+      <h3>Your Collaborators' Datasets</h3>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th class="col-md-1">Uploader</th>
+      <th class="col-md-2">Dataset</th>
+      <th class="col-md-3">Creators</th>
+      <th class="col-md-1">Sharing Preferences</th>
+      <th class="col-md-2"><%= Planout.instance.get[:template][:link_title]-%> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% cas[2..8].each do |added_item_log| -%>
+        <%= display_single_others_items(added_item_log, 'added') -%>
+    <% end %>
+    </tbody>
+  </table>
+
+<div>
+<%= link_to 'Continue', frame_experiment_usability_ask_path, class:"btn btn-primary btn-lg pull-right" %>
+</div>
+
+</div>

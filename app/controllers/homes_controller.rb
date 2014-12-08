@@ -1,6 +1,9 @@
 class HomesController < ApplicationController
 
 
+  layout :get_layout
+
+
   before_filter :redirect_to_sign_up_when_no_user
   before_filter :login_required, :only=>[:feedback,:send_feedback]
 
@@ -93,5 +96,13 @@ class HomesController < ApplicationController
 
     return results
   end
+
+
+  def get_layout
+    Planout.instance.get[:template][:layout]
+  end
+
+
+
 
 end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  year_born: 1
+  discipline: MyString
+
+two:
+  year_born: 1
+  discipline: MyString

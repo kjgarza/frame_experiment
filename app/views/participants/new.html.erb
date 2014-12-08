@@ -1,0 +1,118 @@
+
+
+<div class="jumbotron">
+  <h1>Some information about you first</h1>
+  <p> Feel free to skip any questions you would prefer not to answer.</p>
+  <!--<%= button_to('Start', root_path, class:"btn btn-danger btn-lg pull-right",remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %>-->
+</div>
+
+
+<div class="container">
+<%= simple_form_for @participant do |f| %>
+
+    <%= f.input :discipline,
+                label: 'What is your primary subject discipline?',
+                placeholder: 'e.g. wet Lab biologist, bioinformatician, mathematical modeller',
+                size: 100,
+                autofocus: true
+    %> <br />
+
+      <%= f.input :materials_type,
+                label: 'what type of data do you produce?',
+                placeholder: 'e.g. mathematical models, spreadsheets with analysis mRNA',
+                size: 100,
+                autofocus: true
+    %> <br />
+
+    <%= f.input :year_born, collection: 1950..2000,
+                label: 'In what year were you born?',
+                prompt: 1995
+    %> <br />
+
+    <%= f.input :howmany, as: :radio_buttons,
+                label: 'How many people are involved in the process of creating your materials?',
+                hint: "that could include for example other researchers, students, or lab technicians)",
+                collection: ["only me","between 2 and 4","between 5 and  12","between 13 and 20","more than 20"]
+    %> <br />
+
+    <%= f.input :ways,  as: :check_boxes,
+                label: 'In which way(s) do you share digital material with researchers outside of you institution?',
+                collection: ["when am I requested for the data","by uploading it in an open repository","by uploading it in my (or my institution) website", "I have never shared materials with openly"]
+    %> <br />
+
+    <%= f.input :when_best, as: :radio_buttons,
+                label: 'When is the best time to make your materials available to the community?',
+                hint: "when do you feel comfortable?",
+                collection: [
+                    "+10 years after publication of a peer-review paper",
+                    "+5 years after publication of a peer-review paper",
+                    "+3 years after publication of a peer-review paper",
+                    "+1 years after publication of a peer-review paper",
+                    "immediately after publication of a peer-review paper",
+                    "before publication of a peer-review paper"
+                ]
+    %> <br />
+
+
+    <%= f.input :frequency, as: :radio_buttons,
+                label: 'How frequently do you upload materials for open access?',
+                collection: [
+                    "every month",
+                    "every three months",
+                    "every six months",
+                    "once a year",
+                    "never"
+                ]
+    %> <br />
+
+    <%= f.input :updating, as: :boolean,
+                label: 'Do you ever change or update materials you have previously uploaded?',
+                hint: "check to say yes"
+    %> <br />
+ </div>
+
+
+
+
+  <div class="bs-example">
+    <ul class="nav nav-pills">
+      <li class="active"><a data-toggle="tab" href="#section0"> >> </a></li>
+      <li><a data-toggle="tab" href="#sectionA">Review Scenario</a></li>
+      <li><a data-toggle="tab" href="#sectionB">Review Instructions</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="section0" class="tab-pane fade in active"></div>
+      <div id="sectionA" class="tab-pane fade">
+        <h3>Scenario</h3>
+        <ol class="lead" >
+          <ol>
+            <li><strong>Imagine</strong> you are a Scientist participating in an International European collaboration.</li>
+            <li><strong>Imagine</strong> that you and your collaborators are  requested by your institutions or funding bodies that once you have publish some results you should share your data online.</li>
+            <li>Your task is to <strong>visit</strong> two websites that are used  by other scientists to publish data online and <strong>publish</strong> a piece of your 'fictional' research data.</li>
+            <li>Please perform the experiment as in a <mark>real life scenario</mark>.</li>
+          </ol>
+
+        </ol>
+      </div>
+      <div id="sectionB" class="tab-pane fade">
+        <h3>Instructions</h3>
+        <ol class="lead" >
+          <li>After <strong>reading</strong> these instructions, you will be taken to a page where you will be asked to <strong>enter</strong>  some <mark>information about your background</mark>.</li>
+          <li>Then you will be sent to the first website to in which you need to <strong>publish</strong> a <mark>piece of data</mark>. During your visit you are free to explore but all you need to do is to upload a file and select your preferences. You can use
+            <a  href="/mydataset.csv">
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> mydataset.csv as a sample.
+
+            </a></li>
+          <li>After, you will be asked to <strong>answer</strong> <mark>4 questions</mark> about the task.</li>
+          <li>Next, a small cognitive activity will be administrated.</li>
+          <li>Then you will be sent to the second website to <strong>publish</strong> a piece of <mark>data</mark>. You can use the same file you used before.</li>
+          <li>Finally you will be asked to <strong>answer</strong> a small set of more <mark>questions</mark> and redirected to your debrief.</li>
+        </ol>      </div>
+    </div>
+  </div>
+
+      <div >
+        <%= f.submit "Start Experiment", class: "btn btn-danger btn-lg"  %>
+
+      </div>
+  <% end %>

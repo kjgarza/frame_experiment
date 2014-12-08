@@ -3,6 +3,10 @@ require 'simple-spreadsheet-extractor'
 
 class DataFilesController < ApplicationController
 
+
+  layout :get_layout
+
+
   include IndexPager
   include SysMODB::SpreadsheetExtractor
   include MimeTypesHelper
@@ -171,6 +175,13 @@ class DataFilesController < ApplicationController
 
       @data_file.policy.set_attributes_with_sharing params[:sharing], @data_file.projects
 
+      Planout.instance.log_event('create', {
+          'with_who' => params[:with_who],
+          'when_to' => params[:when_to],
+          'data_file_title' => params[:data_file_title],
+      })
+
+
       assay_ids = params[:assay_ids] || []
 
       if @data_file.save
@@ -214,7 +225,9 @@ class DataFilesController < ApplicationController
                 @assay.relate(@data_file, RelationshipType.find_by_title(r_type))
               end
             end
-            format.html { redirect_to data_file_path(@data_file) }
+            # format.html { redirect_to data_file_path(@data_file) }
+            # format.html { redirect_to frame_experiment_path(:usability_ask) }
+            format.html { redirect_to new_feedback_path(:with_who => params[:with_who], :when_to => params[:when_to]) }
           end
         end
       else
@@ -405,6 +418,10 @@ class DataFilesController < ApplicationController
       flash[:error] = "Only available when logged in via xml"
       redirect_to root_url
     end
+  end
+
+  def get_layout
+    Planout.instance.get[:template][:layout]
   end
 
 end

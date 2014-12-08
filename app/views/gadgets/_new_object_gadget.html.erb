@@ -16,12 +16,44 @@
         <div id="new_asset" class="sysmo_gadget">
 
           <div class="header curved_top">
-            <%= t('gadget.new_heading') %>
+            <!--<%= t('gadget.new_heading') %>-->
+
+            <%= t(Planout.instance.get[:template][:primary_btn_title]) %>
           </div>
 
           <div class="contents curved_bottom">
             <div style="text-align: center;">
-              <input type=button id="new_asset_button" class="<%= button_class %>" value="<%= t('gadget.create_button')%>" onclick="javascript:toggleDynamicMenu('new_asset_menu');"/>
+
+              <style>
+                  .button_link {
+                      color: #FFF;
+                      background-color: #337AB7;
+                      border-color: #2E6DA4;
+                      display: inline-block;
+                      padding: 6px 12px;
+                      margin-bottom: 0px;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 1.42857;
+                      text-align: center;
+                      white-space: nowrap;
+                      vertical-align: middle;
+                      cursor: pointer;
+                      -moz-user-select: none;
+                      background-image: none;
+                      border: 1px solid transparent;
+                      border-radius: 4px;
+                  }
+
+                  .button_link:hover {
+                      color: white;
+                  }
+              </style>
+
+              <%= link_to Planout.instance.get[:template][:primary_btn], new_data_file_path, class:"button_link" %>
+
+              <!--<input type=button id="new_asset_button" class="<%= button_class %>" value="<%= Planout.instance.get[:template][:primary_btn] %>" onclick="javascript:toggleDynamicMenu('new_asset_menu');"/>-->
+              <!--<input type=button id="new_asset_button" class="<%= button_class %>" value="<%= t('gadget.create_button')%>" onclick="javascript:toggleDynamicMenu('new_asset_menu');"/>-->
               <ul id="new_asset_menu" class='dynamic_menu with_smaller_shadow' style="display:none;">
 
                 <% new_creatable_selection_list.each do |item| -%>

@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible"/>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <title><%= page_title controller.controller_name, controller.action_name %></title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <%= csrf_meta_tag %>
+
+  <% if is_front_page? && !Seek::Config.is_virtualliver%>
+      <%= seek_stylesheet_tags 'front_page' %>
+      <%= seek_javascript_tags 'front_page' %>
+  <% else %>
+      <%= seek_stylesheet_tags %>
+      <%= seek_javascript_tags %>
+  <% end %>
+
+  <script type="text/javascript">
+      function show_ajax_loader(element) {
+          $(element).innerHTML =<%= ("'" + image_tag("ajax-loader.gif") + "'").html_safe -%>;
+      }
+      function show_large_ajax_loader(element) {
+          $(element).innerHTML =<%= ("'" + image_tag("ajax-loader-large.gif") + "'").html_safe -%>
+      }
+  </script>
+
+  <style media="screen" type="text/css">
+
+      #topbar {
+          text-align: center;
+          height: 40px;
+          background-image: url("<%= asset_path(Planout.instance.get[:template][:searchfade_repeat]) %>");
+          background-repeat: repeat-x;
+          background-position: top center;
+          padding: 10px 0;
+          border-top: 0px;
+      }
+
+      body{
+          padding-top: 135px;
+      }
+
+      #myexp_sidebar {
+          /*padding: 10px 0 0 0;*/
+          padding: 10px 0.5em 1px 0.5em;
+          background-color: #<%= Planout.instance.get[:template][:color] %>;
+          border-right: 1px solid #DEDEDE;
+          border-width: 0 0 1px 1px;
+          width: 100%;
+      }
+
+      div.home_panel .heading {
+          background-color: #<%= Planout.instance.get[:template][:color] %>;
+      }
+
+      .menutabs li a:link {
+          background: none repeat scroll 0 0 #<%= Planout.instance.get[:template][:color] %>;
+          border: 0 none;
+          color: #ffffff;
+      }
+
+      #curved_top {
+          background-color: #<%= Planout.instance.get[:template][:color] %>;
+      }
+
+      .menutabs li a:visited {
+          background: none repeat scroll 0 0 #<%= Planout.instance.get[:template][:color] %>;
+          color: #ffffff;
+      }
+
+      ul#header > li#seek_logo img {
+          max-height: 80px;
+          max-width: 100px;
+      }
+
+  </style>
+
+
+  <link href="#data" type="application/json" rel="exhibit-data" />
+</head>
+
+
+
+
+<body id="body">
+
+<nav class="navbar navbar-fixed-top navbar-inverted" role="navigation" style="background-color: #FFFFFF; border:0px; ">
+  <div class="container">
+      <div id="header">
+      <%= render :partial=>"layouts/header_main" %>
+    </div>
+    <%= render :partial=>"general/top_bar" %>
+  </div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+
+
+
+<!--<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">-->
+  <!--<div class="container">-->
+    <!--<div class="navbar-header">-->
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+        <!--<span class="sr-only">Toggle navigation</span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+      <!--</button>-->
+      <!--<a class="navbar-brand" href="#">Project name</a>-->
+    <!--</div>-->
+    <!--<div id="navbar" class="collapse navbar-collapse">-->
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li class="active"><a href="#">Home</a></li>-->
+        <!--<li><a href="#about">About</a></li>-->
+        <!--<li><a href="#contact">Contact</a></li>-->
+      <!--</ul>-->
+    <!--</div>&lt;!&ndash; /.nav-collapse &ndash;&gt;-->
+  <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
+<!--</nav>&lt;!&ndash; /.navbar &ndash;&gt;-->
+
+<div class="container">
+  <div class="row row-offcanvas row-offcanvas-right">
+
+
+    <% unless @no_sidebar -%>
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas"  role="navigation">
+          <div id="myexp_sidebar">
+            <%= render :partial => "layouts/sidebar" %>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+    <% end -%>
+
+
+    <div class="col-xs-12 col-sm-9">
+      <p class="pull-right visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+      <!--<div class="jumbotron">-->
+        <!--<h1>Hello, world!</h1>-->
+        <!--<p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <div id="bd">
+        <!--<div id="bd" class="col-xs-6 col-lg-4">-->
+
+            <div id="yui-main">
+              <div <%= "class='yui-b'".html_safe unless @no_sidebar %> id="content">
+                <table width="100%">
+                  <tr>
+                    <td>
+                      <div class="breadcrumbs">
+                        <%= render_breadcrumbs :separator => ' > ' %>
+                      </div>
+                    </td>
+
+                    <td class="return_to_search" id='return_to_search'>
+                      <%= add_return_to_search %>
+                    </td>
+                  </tr>
+                </table>
+
+                <%# applying styling to error / notice messages -%>
+                <% if flash[:error] %>
+                    <div id="error_flash" class="box_standout curved with_smaller_shadow" style="color: red; margin: 0.8em 0.8em; line-height: 1.4;">
+                      <%= link_to_function image_tag("close.gif", :style => "float: right;"),"new Effect.toggle('error_flash','slide',{duration:0.3});" %>
+                      <%= flash[:error] %>
+                    </div>
+                <% end %>
+                <% if flash[:notice] %>
+                    <div id="notice_flash" class="box_standout curved with_smaller_shadow" style="color: green; margin: 0.8em 0.8em; line-height: 1.4;">
+                      <%= link_to_function image_tag("close.gif", :style => "float: right;"),"new Effect.toggle('notice_flash','slide',{duration:0.3});" %>
+                      <%= flash[:notice] %>
+                    </div>
+                <% end %>
+
+                <%# main content part of every page -%>
+                <%= yield :layout %>
+
+              </div>
+              <br style="clear:both"/>
+            </div>
+
+
+
+        </div>
+      <!--</div>&lt;!&ndash;/row&ndash;&gt;-->
+    </div><!--/.col-xs-12.col-sm-9-->
+
+<!-- Side bar HERE-->
+  </div><!--/row-->
+
+  <hr>
+
+  <footer>
+    <div id="ft">
+      <%= render :partial=>"layouts/footer" %>
+    </div>
+  </footer>
+
+</div><!--/.container-->
+
+
+<% unless is_front_page? %>
+    <script type="text/javascript">
+        initialiseFolds();
+    </script>
+<% end %>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="../../dist/js/bootstrap.min.js"></script>-->
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="offcanvas.js"></script>
+
+
+
+
+
+<%= piwik_tracking_tag %>
+<%= analytics_init if Seek::Config.google_analytics_enabled %>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

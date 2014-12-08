@@ -120,3 +120,8 @@ group :test do
   gem 'pg'
 end
 
+gem 'wicked'
+gem 'logger'
+gem 'simple_form', '~> 2.0.0.rc'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'sass-rails', '>= 3.2'

@@ -1,5 +1,7 @@
 SEEK::Application.routes.draw do
 
+  get "participants/index"
+
   mount TavernaPlayer::Engine, :at => (SEEK::Application.config.relative_url_root || "/")
 
   resources :scales do
@@ -638,4 +640,21 @@ SEEK::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+  resources :participants
+  # resources :frame_experiment
+  # do
+  #   resources :usability_ask
+  # end
+
+  match '/new_feedback' => 'new_feedbacks#new_feedback'
+  match '/frame_experiment/new_feedback', :controller => 'frame_experiment', :action => 'new_feedback', :via=>:put
+  match '/frame_experiment/instructions', :controller => 'frame_experiment', :action => 'instructions', :via=>:put
+  match '/frame_experiment/consent', :controller => 'frame_experiment', :action => 'consent', :via=>:put
+  match '/frame_experiment/debrief', :controller => 'frame_experiment', :action => 'debrief'
+  match '/frame_experiment/awareness', :controller => 'frame_experiment', :action => 'awareness', :via=>:put
+  match '/frame_experiment/washout', :controller => 'frame_experiment', :action => 'washout', :via=>:put
+  match '/frame_experiment/usability_ask', :controller => 'frame_experiment', :action => 'usability_ask', :via=>:put
+  resources :frame_experiment
+
 end

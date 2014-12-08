@@ -1,0 +1,147 @@
+<div class="jumbotron">
+  <h1>How do you evaluate this task?</h1>
+  <p>Please helps to evaluate the task you just performed by answering 4 short questions.</p>
+</div>
+
+
+<%= form_tag '/frame_experiment/usability_ask', method: :put do %>
+    <div class="control-group radio_buttons lead">
+      <label class="radio_buttons optional control-label">
+
+    <p>Overall, I am satisfied with the ease of completing the tasks in this scenario.</p>
+      </label>
+
+      <div class="control">
+
+
+    <%= radio_button_tag(:ease, "1") %>
+    <%= label_tag(:ease_1, "Strongly disagree") %>
+
+
+    <%= radio_button_tag(:ease, "2") %>
+    <%= label_tag(:ease_2, "Disagree") %>
+
+
+    <%= radio_button_tag(:ease, "3") %>
+    <%= label_tag(:ease_3, "Neither agree nor disagree") %>
+
+
+    <%= radio_button_tag(:ease, "4") %>
+    <%= label_tag(:ease_4, "Agree") %>
+
+
+    <%= radio_button_tag(:ease, "5") %>
+    <%= label_tag(:ease_5, "Strongly agree") %>
+    </div>
+      </div>
+<br/>
+
+
+
+    <div class="control-group radio_buttons lead">
+      <label class="radio_buttons optional control-label">
+
+    <p>Overall, I am satisfied with the amount of time it took to complete the tasks in this scenario.</p>
+      </label>
+
+
+<div class="control">
+    <%= radio_button_tag(:time, "1") %>
+    <%= label_tag(:time_1, "Strongly disagree") %>
+
+
+    <%= radio_button_tag(:time, "2") %>
+    <%= label_tag(:time_2, "Disagree") %>
+
+
+    <%= radio_button_tag(:time, "3") %>
+    <%= label_tag(:time_3, "Neither agree nor disagree") %>
+
+
+    <%= radio_button_tag(:time, "4") %>
+    <%= label_tag(:time_4, "Agree") %>
+
+
+    <%= radio_button_tag(:time, "5") %>
+    <%= label_tag(:time_5, "Strongly agree") %>
+
+</div>
+      </div>
+    <br/>
+
+    <!--Strongly disagree-->
+    <!--<%= range_field(:time, :agreement, in: 1..5, :step => 1 ) %>-->
+    <!--Strongly agree-->
+
+    <div class="control-group radio_buttons lead">
+      <label class="radio_buttons optional control-label">
+
+    <p>Overall, I am satisfied with the support information (online-line help, messages, documentation) when completing the tasks.</p>
+      </label>
+
+      <div class="control">
+
+
+    <%= radio_button_tag(:support, "1") %>
+    <%= label_tag(:support_1, "Strongly disagree") %>
+
+    <%= radio_button_tag(:support, "2") %>
+    <%= label_tag(:support_2, "Disagree") %>
+
+
+    <%= radio_button_tag(:support, "3") %>
+    <%= label_tag(:support_3, "Neither agree nor disagree") %>
+
+
+    <%= radio_button_tag(:support, "4") %>
+    <%= label_tag(:support_4, "Agree") %>
+
+
+    <%= radio_button_tag(:support, "5") %>
+    <%= label_tag(:support_5, "Strongly agree") %>
+
+
+    </div>
+    </div>
+    <br/>
+
+
+    <div class="control-group radio_buttons lead">
+      <label class="radio_buttons optional control-label">
+
+        <p>I regret the data sharing preferences I've chosen in the website</p>
+      </label>
+
+      <div class="control">
+
+
+
+        <%= radio_button_tag(:regret, "1") %>
+        <%= label_tag(:regret_1, "Strongly disagree") %>
+
+        <%= radio_button_tag(:regret, "2") %>
+        <%= label_tag(:regret_2, "Disagree") %>
+
+
+        <%= radio_button_tag(:regret, "3") %>
+        <%= label_tag(:regret_3, "Neither agree nor disagree") %>
+
+
+        <%= radio_button_tag(:regret, "4") %>
+        <%= label_tag(:regret_4, "Agree") %>
+
+
+        <%= radio_button_tag(:regret, "5") %>
+        <%= label_tag(:regret_5, "Strongly agree") %>
+
+
+      </div>
+    </div>
+    <br/>
+
+
+    <%= submit_tag  'Continue', class:"btn btn-primary btn-lg" %>
+
+
+<% end %>
+

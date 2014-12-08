@@ -23,10 +23,13 @@
 %>
 <% if sharing_enable -%>
     <p>
-      <%= render :seek_partial => "assets/sharing_form" -%>
+      <!--KGS-->
+      <%= render :seek_partial => Planout.instance.get[:template][:sharing_form] -%>
+      <!--KGE-->
     </p>
 <% end -%>
-
+<!--KGS-->
+<% if 1 == 3 -%>
 <% if taggable -%>
     <p>
       <%= render :seek_partial=>"assets/select_tags" -%>
@@ -58,3 +61,5 @@
     </p>
 <% end -%>
 
+<% end -%>
+<!--KGE-->

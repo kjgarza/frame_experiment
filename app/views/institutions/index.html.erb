@@ -6,7 +6,6 @@
         </li>
     <% end -%>
 </ul>
-
 <% if Seek::Config.faceted_browsing_enabled && Seek::Config.facet_enable_for_pages[controller_name] && @ie_support_faceted_browsing  %>
     <%= render :partial => "faceted_browsing/faceted_browsing", :object => @institutions %>
 <% else %>

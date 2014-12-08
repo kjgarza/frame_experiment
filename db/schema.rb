@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141017125035) do
+ActiveRecord::Schema.define(:version => 20141123180701) do
 
   create_table "activity_logs", :force => true do |t|
     t.string   "action"
@@ -796,6 +796,19 @@ ActiveRecord::Schema.define(:version => 20141017125035) do
 
   add_index "organisms_projects", ["organism_id", "project_id"], :name => "index_organisms_projects_on_organism_id_and_project_id"
   add_index "organisms_projects", ["project_id"], :name => "index_organisms_projects_on_project_id"
+
+  create_table "participants", :force => true do |t|
+    t.integer  "year_born"
+    t.string   "discipline"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "materials_type"
+    t.integer  "howmany"
+    t.text     "ways"
+    t.integer  "when_best"
+    t.integer  "frequency"
+    t.integer  "updating"
+  end
 
   create_table "people", :force => true do |t|
     t.datetime "created_at"

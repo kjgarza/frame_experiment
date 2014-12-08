@@ -1,0 +1,59 @@
+
+<div class="jumbotron">
+  <img src="http://www.tinytoes.co.uk/assets/manchester-university-logo.png" width="242" class="pull-right">
+
+  <h1>Consent Form</h1>
+  <p>If you are happy to participate please complete the consent form below</p>
+</div>
+
+
+
+
+<%= form_tag '/frame_experiment/consent', method: :put do %>
+    <div class="form-group">
+      <div class="checkbox">
+        <label class="lead" >
+          <input type="checkbox" id="terms" data-error="Before you wreck yourself"  required>
+          I confirm that I have read the attached information sheet on the above project and have had the opportunity to consider the information and ask questions and had these answered satisfactorily.
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="checkbox">
+        <label class="lead" >
+          <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+          I understand that my participation in the study is voluntary and that I am free to withdraw at any time without giving a reason.
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="checkbox">
+        <label class="lead" >
+          <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+          I agree to the use of anonymous quotes.
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="checkbox">
+        <label class="lead" >
+          <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+          I agree to take part in the above project.
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag  'Continue', class:"btn btn-primary btn-lg"%>
+
+    </div>
+    <% end %>

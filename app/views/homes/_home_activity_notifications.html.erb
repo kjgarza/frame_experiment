@@ -3,7 +3,8 @@
     <div class="heading curved_top">Latest additions</div>
     <div id="recently_added" class="homepanel_list">
       <ul>
-        <% recently_added_item_logs_hash(25.years.ago, 8).each do |added_item_log| -%>
+        <% frames = recently_added_item_logs_hash(25.years.ago, 8) -%>
+        <% frames[1..8].each do |added_item_log| -%>
             <%= display_single_log_item_hash(added_item_log, 'added') -%>
         <% end %>
       </ul>

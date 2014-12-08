@@ -1,0 +1,245 @@
+<nex:nexml xmlns:nex="http://www.nexml.org/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdao="http://purl.obolibrary.org/obo/cdao.owl" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/" xmlns:cc="http://creativecommons.org/ns#" xmlns:ncbi="http://www.ncbi.nlm.nih.gov/taxonomy#" xmlns:tc="http://rs.tdwg.org/ontology/voc/TaxonConcept#" xmlns="http://www.nexml.org/2009" version="0.9" generator="RNeXML">
+  <meta xsi:type="nex:LiteralMeta" id="uuid-53e6c722-d84d-4514-b548-6b581e43c062" property="dc:title" datatype="xsd:string" content="Geospiza phylogeny with character data rendered as NeXML"/>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-5ea65e18-0773-4721-8983-97834b9ececd" property="dc:creator" datatype="xsd:string" content="Carl Boettiger"/>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-6314d070-f84f-49a0-9aad-786c938f5974" property="dc:description" datatype="xsd:string" content="This example NeXML file was created using the data originally provided in the geiger package for R to illustrate how this data can be stored, shared and distributed as NeXML."/>
+  <meta xsi:type="nex:ResourceMeta" id="uuid-27cbc4b6-b093-4742-af40-c8f8bc1893f6" href="http://creativecommons.org/publicdomain/zero/1.0/" rel="cc:license"/>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-e212dd6d-a108-42ab-ae0e-d9d240eeb32d" property="dcterms:bibliographicCitation" datatype="xsd:string" content="Alfaro M, Santini F, Brock C, Alamillo H, Dornburg A, Rabosky D,&#10;Carnevale G and Harmon L (2009). &quot;Nine exceptional radiations plus high&#10;turnover explain species diversity in jawed vertebrates.&quot; _Proceedings&#10;of the National Academy of Sciences of the United States of America_,&#10;*106*, pp. 13410-13414.">
+    <meta xsi:type="nex:LiteralMeta" id="uuid-bed978f8-0c6e-4656-b119-d86346190357" property="prism:volume" datatype="xsd:string" content="106"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-88870fb7-592f-4d9b-b1fa-1043ac901a51" property="dc:publisher" datatype="xsd:string" content="Proceedings of the National Academy of Sciences of the United States of America"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-83ba201b-92ff-436a-a4d9-9bed1209a901" property="prism:publicationName" datatype="xsd:string" content="Proceedings of the National Academy of Sciences of the United States of America"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-c5ea8ac4-9d7a-497e-ac4c-e7ddeb22feb8" property="prism:endingPage" datatype="xsd:string" content="13414"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-de79fc88-2150-4acf-b625-505524fd2121" property="prism:startingPage" datatype="xsd:string" content="13410"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-ebc83b86-b8aa-4705-b605-870dd0b5b188" property="prism:publicationDate" datatype="xsd:string" content="2009"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-3ad77058-2100-48b0-8cc7-24841d063788" property="dc:title" datatype="xsd:string" content="Nine exceptional radiations plus high turnover explain species diversity in jawed vertebrates"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-13f6d4c0-e317-43a8-a2b1-e2b7c4e295e4" property="dc:contributor" datatype="xsd:string" content="ME Alfaro"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-5a0151fc-3407-4daa-9f51-4e9ef9668c4b" property="dc:contributor" datatype="xsd:string" content="F Santini"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-3467ce3e-0a11-4290-93a8-b7441a808c67" property="dc:contributor" datatype="xsd:string" content="C Brock"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-f038392d-8920-4291-ba47-dac35b19a73b" property="dc:contributor" datatype="xsd:string" content="H Alamillo"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-849fdc13-2997-40c9-8255-8c45f652a0e0" property="dc:contributor" datatype="xsd:string" content="A Dornburg"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-9de084ac-487b-4ebf-ab27-265da27d9688" property="dc:contributor" datatype="xsd:string" content="DL Rabosky"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-7422e3d1-6368-45ca-b052-e446844910d4" property="dc:contributor" datatype="xsd:string" content="G Carnevale"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-2a9bda4f-e203-43ab-adb6-3a419bfb96e0" property="dc:contributor" datatype="xsd:string" content="LJ Harmon"/>
+  </meta>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-9cee8f5d-9418-4ebf-bc93-5c387dec234d" property="dcterms:bibliographicCitation" datatype="xsd:string" content="Eastman J, Alfaro M, Joyce P, Hipp A and Harmon L (2011). &quot;A novel&#10;comparative method for identifying shifts in the rate of character&#10;evolution on trees.&quot; _Evolution_, *65*, pp. 3578-3589.">
+    <meta xsi:type="nex:LiteralMeta" id="uuid-38bdb972-2445-454d-91bb-6e7a07e7aafb" property="prism:volume" datatype="xsd:string" content="65"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-d2a5b60e-0b04-448c-a6de-ba39ecc94bd7" property="dc:publisher" datatype="xsd:string" content="Evolution"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-ab84db42-025c-4e44-9758-4fa3e05badab" property="prism:publicationName" datatype="xsd:string" content="Evolution"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-0480f2cd-5a8b-4cee-ad68-161ae2d0c894" property="prism:endingPage" datatype="xsd:string" content="3589"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-caead4eb-5f02-4cc7-b545-5ff5796477a3" property="prism:startingPage" datatype="xsd:string" content="3578"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-5ccc2799-4b57-469f-94ab-89b2289d5202" property="prism:publicationDate" datatype="xsd:string" content="2011"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-077e7c4b-20ec-4da1-a7ff-1f94fe4af355" property="dc:title" datatype="xsd:string" content="A novel comparative method for identifying shifts in the rate of character evolution on trees"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-409586dc-aa44-4545-88d6-2b28787c0ce9" property="dc:contributor" datatype="xsd:string" content="JM Eastman"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-8e8c9c46-95f9-4458-b1f3-f6f3655d8e94" property="dc:contributor" datatype="xsd:string" content="ME Alfaro"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-2165393d-a29b-4e76-84ab-e7ddd71419b5" property="dc:contributor" datatype="xsd:string" content="P Joyce"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-133f76b1-fe10-49a3-8406-3fca7b62c91b" property="dc:contributor" datatype="xsd:string" content="AL Hipp"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-1f28242b-08a3-4f86-bb9c-ce322a2972e3" property="dc:contributor" datatype="xsd:string" content="LJ Harmon"/>
+  </meta>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-bacac997-86a0-4394-8095-dd18c35a035e" property="dcterms:bibliographicCitation" datatype="xsd:string" content="Slater G, Harmon L, Wegmann D, Joyce P, Revell L and Alfaro M (2012).&#10;&quot;Fitting models of continuous trait evolution to incompletely sampled&#10;comparative data using approximate Bayesian computation.&quot; _Evolution_,&#10;*66*, pp. 752-762.">
+    <meta xsi:type="nex:LiteralMeta" id="uuid-62d60759-f481-44ab-a39b-5cd9e787439a" property="prism:volume" datatype="xsd:string" content="66"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-f780efda-e436-4fb4-8633-6c624894a960" property="dc:publisher" datatype="xsd:string" content="Evolution"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-a23f8eb3-e9df-4e59-8989-c8d762cebc75" property="prism:publicationName" datatype="xsd:string" content="Evolution"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-a062bb45-8917-4f55-ad7d-ef10dac9572e" property="prism:endingPage" datatype="xsd:string" content="762"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-00e1406a-2444-4ea2-954f-b7f0494602f6" property="prism:startingPage" datatype="xsd:string" content="752"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-6adfcfb0-2dc0-4272-8287-e641e1ef4150" property="prism:publicationDate" datatype="xsd:string" content="2012"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-6b5c2ff3-e1f3-489b-b779-51c5b560d387" property="dc:title" datatype="xsd:string" content="Fitting models of continuous trait evolution to incompletely sampled comparative data using approximate Bayesian computation"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-25fca721-cfe7-40bc-be72-13c6b5b4f870" property="dc:contributor" datatype="xsd:string" content="GJ Slater"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-0f9ae5e8-b6f6-42be-a7f2-bd92901b56fc" property="dc:contributor" datatype="xsd:string" content="LJ Harmon"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-868bfe60-1515-4220-b794-5b599d698d8a" property="dc:contributor" datatype="xsd:string" content="D Wegmann"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-5ad5b7e1-9887-4c01-af6a-23c0b97ec39d" property="dc:contributor" datatype="xsd:string" content="P Joyce"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-2a52a633-d5b8-4350-ac84-722b594de99d" property="dc:contributor" datatype="xsd:string" content="LJ Revell"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-a925df78-edfa-44b6-95e9-fd3e47232eb9" property="dc:contributor" datatype="xsd:string" content="ME Alfaro"/>
+  </meta>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-dbc7760b-1770-460f-97fe-4791562c7d4a" property="dcterms:bibliographicCitation" datatype="xsd:string" content="Harmon L, Weir J, Brock C, Glor R and Challenger W (2008). &quot;GEIGER:&#10;investigating evolutionary radiations.&quot; _Bioinformatics_, *24*, pp.&#10;129-131.">
+    <meta xsi:type="nex:LiteralMeta" id="uuid-e4cd34d4-8bdb-415b-9019-0882467b3c3d" property="prism:volume" datatype="xsd:string" content="24"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-3cf2284b-8f3a-4413-b509-32620b3406d0" property="dc:publisher" datatype="xsd:string" content="Bioinformatics"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-a393de92-dfe6-4d5a-ac44-da43d54a0c98" property="prism:publicationName" datatype="xsd:string" content="Bioinformatics"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-29579dda-1846-4520-8f01-808fa2000f7b" property="prism:endingPage" datatype="xsd:string" content="131"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-e325e6f1-b77d-4bbf-bf28-7f9f6776ab74" property="prism:startingPage" datatype="xsd:string" content="129"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-90fc3fd2-bcdc-4337-a5ca-b035f253ff98" property="prism:publicationDate" datatype="xsd:string" content="2008"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-91e9a261-e7b2-4d52-91ec-3f636224b6b4" property="dc:title" datatype="xsd:string" content="GEIGER: investigating evolutionary radiations"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-cc6d8e53-4b77-48d5-9efb-8aaddfd3fbb3" property="dc:contributor" datatype="xsd:string" content="LJ Harmon"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-155d21e2-5223-4c45-a07b-3664b314cf6a" property="dc:contributor" datatype="xsd:string" content="JT Weir"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-45b38867-0e20-4c60-9eef-dc69eac6f28c" property="dc:contributor" datatype="xsd:string" content="CD Brock"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-0dbb94e0-9143-4753-9ad6-a565004c160e" property="dc:contributor" datatype="xsd:string" content="RE Glor"/>
+    <meta xsi:type="nex:LiteralMeta" id="uuid-f481c925-da18-4ac2-b1e4-c943ceec938d" property="dc:contributor" datatype="xsd:string" content="W Challenger"/>
+  </meta>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-c419aff1-e1fd-424f-ba2a-d6e780a93600" property="dc:identifier" datatype="xsd:string" content="http://doi.org/10.6084/m9.figshare.1256249"/>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-0b3db878-5f14-4549-b687-10a3db4171d0" property="dc:pubdate" datatype="xsd:string" content="2014-12-02"/>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-55e0b684-fecc-4c76-8ae9-51fc138167c8" property="dc:rights" datatype="xsd:string" content="CC0"/>
+  <meta xsi:type="nex:LiteralMeta" id="uuid-14807c57-3d7d-4cec-ae90-61f8f4aa08cf" property="dcterms:bibliographicCitation" datatype="xsd:string"/>
+  <otus about="#uuid-f35e68e0-e2e0-4017-bebc-fe20a1e67e02" id="uuid-f35e68e0-e2e0-4017-bebc-fe20a1e67e02">
+    <otu about="#uuid-7a324995-3cd9-42c8-bb0f-4d853457434a" label="fuliginosa" id="uuid-7a324995-3cd9-42c8-bb0f-4d853457434a"/>
+    <otu about="#uuid-ee8d3430-e305-4e10-9b61-04c3ef9c918f" label="fortis" id="uuid-ee8d3430-e305-4e10-9b61-04c3ef9c918f"/>
+    <otu about="#uuid-3e206b36-94dd-4b49-add5-c735dcaeff13" label="magnirostris" id="uuid-3e206b36-94dd-4b49-add5-c735dcaeff13"/>
+    <otu about="#uuid-25f032cd-88e4-4e2f-afa5-8777c5f4bd54" label="conirostris" id="uuid-25f032cd-88e4-4e2f-afa5-8777c5f4bd54"/>
+    <otu about="#uuid-65af3c07-738d-4fa1-b3b2-fb00abe54471" label="scandens" id="uuid-65af3c07-738d-4fa1-b3b2-fb00abe54471"/>
+    <otu about="#uuid-ac66ddd7-5f07-4758-a550-19d92f988521" label="difficilis" id="uuid-ac66ddd7-5f07-4758-a550-19d92f988521"/>
+    <otu about="#uuid-7aed2a19-02dd-4cb1-a22b-4b6a56acff7a" label="pallida" id="uuid-7aed2a19-02dd-4cb1-a22b-4b6a56acff7a"/>
+    <otu about="#uuid-6a6d2a81-57b9-4b5e-8f9e-03fbff29444f" label="parvulus" id="uuid-6a6d2a81-57b9-4b5e-8f9e-03fbff29444f"/>
+    <otu about="#uuid-e84d1a08-ca68-48f2-855f-fb8277734f38" label="psittacula" id="uuid-e84d1a08-ca68-48f2-855f-fb8277734f38"/>
+    <otu about="#uuid-b7fef5ac-9329-4814-8932-725d7915c99b" label="pauper" id="uuid-b7fef5ac-9329-4814-8932-725d7915c99b"/>
+    <otu about="#uuid-02b03343-e2b7-43c5-b74a-4e69cd9fab8e" label="Platyspiza" id="uuid-02b03343-e2b7-43c5-b74a-4e69cd9fab8e"/>
+    <otu about="#uuid-8af4b4b5-8527-45cf-bcee-6194490bac87" label="fusca" id="uuid-8af4b4b5-8527-45cf-bcee-6194490bac87"/>
+    <otu about="#uuid-6e00e77c-f09a-4f26-8e61-a6b44dc56405" label="Pinaroloxias" id="uuid-6e00e77c-f09a-4f26-8e61-a6b44dc56405"/>
+    <otu about="#uuid-1d3c4e3e-208d-46d9-a684-c8881aef3765" label="olivacea" id="uuid-1d3c4e3e-208d-46d9-a684-c8881aef3765"/>
+  </otus>
+  <trees about="#uuid-4c37f806-e408-4d36-8ca7-5df249656a65" id="uuid-4c37f806-e408-4d36-8ca7-5df249656a65" otus="uuid-f35e68e0-e2e0-4017-bebc-fe20a1e67e02">
+    <tree xsi:type="nex:FloatTree" about="#uuid-9b490001-e041-4a11-81a5-e1f2d2a81938" id="uuid-9b490001-e041-4a11-81a5-e1f2d2a81938">
+      <node about="#uuid-ccf84785-5b91-468f-8222-fe4d521434d1" id="uuid-ccf84785-5b91-468f-8222-fe4d521434d1"/>
+      <node about="#uuid-9e8a9c87-4c65-4b03-ae51-86749b87a6d6" id="uuid-9e8a9c87-4c65-4b03-ae51-86749b87a6d6"/>
+      <node about="#uuid-1ed35055-3b8f-40d6-b15c-8e39160b4f50" id="uuid-1ed35055-3b8f-40d6-b15c-8e39160b4f50"/>
+      <node about="#uuid-1128454b-4df1-4eef-8351-982ff99f3862" id="uuid-1128454b-4df1-4eef-8351-982ff99f3862"/>
+      <node about="#uuid-6c546e60-12e1-4da8-b415-67ed45ce0123" id="uuid-6c546e60-12e1-4da8-b415-67ed45ce0123"/>
+      <node about="#uuid-d0eb9637-37bf-4ca0-bad7-8a25725da2b9" id="uuid-d0eb9637-37bf-4ca0-bad7-8a25725da2b9"/>
+      <node about="#uuid-95f7e684-80d3-485f-a949-a810097b714c" id="uuid-95f7e684-80d3-485f-a949-a810097b714c"/>
+      <node about="#uuid-257bb33e-5929-4cb2-98a2-75f491616020" id="uuid-257bb33e-5929-4cb2-98a2-75f491616020"/>
+      <node about="#uuid-22989503-2e5e-41dc-9c89-b2e7db58841e" id="uuid-22989503-2e5e-41dc-9c89-b2e7db58841e"/>
+      <node about="#uuid-12e70087-a022-4faa-ab61-c4081fdd2a0a" id="uuid-12e70087-a022-4faa-ab61-c4081fdd2a0a"/>
+      <node about="#uuid-80cd18ff-2940-4235-97da-efaa28eb7f64" id="uuid-80cd18ff-2940-4235-97da-efaa28eb7f64"/>
+      <node about="#uuid-597d98db-9d9f-42c3-8b87-b67814e6b587" id="uuid-597d98db-9d9f-42c3-8b87-b67814e6b587"/>
+      <node about="#uuid-24e789d5-d6c5-4436-8110-0c30a58e89e0" id="uuid-24e789d5-d6c5-4436-8110-0c30a58e89e0"/>
+      <node about="#uuid-5a1df34e-c23d-4296-905b-e71b6f7ad6bc" id="uuid-5a1df34e-c23d-4296-905b-e71b6f7ad6bc" otu="uuid-7a324995-3cd9-42c8-bb0f-4d853457434a"/>
+      <node about="#uuid-63b35ebb-608d-4c09-b868-810df384a04e" id="uuid-63b35ebb-608d-4c09-b868-810df384a04e" otu="uuid-ee8d3430-e305-4e10-9b61-04c3ef9c918f"/>
+      <node about="#uuid-dca49943-a8d3-446b-a2c9-46e224cca41c" id="uuid-dca49943-a8d3-446b-a2c9-46e224cca41c" otu="uuid-3e206b36-94dd-4b49-add5-c735dcaeff13"/>
+      <node about="#uuid-ca4b21bd-57f7-4154-9bfc-fbb1b2663492" id="uuid-ca4b21bd-57f7-4154-9bfc-fbb1b2663492" otu="uuid-25f032cd-88e4-4e2f-afa5-8777c5f4bd54"/>
+      <node about="#uuid-fd08135d-6779-493a-9e90-5f2b0416eb3b" id="uuid-fd08135d-6779-493a-9e90-5f2b0416eb3b" otu="uuid-65af3c07-738d-4fa1-b3b2-fb00abe54471"/>
+      <node about="#uuid-cc1787c1-468f-454e-9ac8-c3150e10610d" id="uuid-cc1787c1-468f-454e-9ac8-c3150e10610d" otu="uuid-ac66ddd7-5f07-4758-a550-19d92f988521"/>
+      <node about="#uuid-617a7ce7-b47c-4320-9002-d40da50ad872" id="uuid-617a7ce7-b47c-4320-9002-d40da50ad872" otu="uuid-7aed2a19-02dd-4cb1-a22b-4b6a56acff7a"/>
+      <node about="#uuid-5271e3c2-64a8-48e3-bf68-3fb5b846cf51" id="uuid-5271e3c2-64a8-48e3-bf68-3fb5b846cf51" otu="uuid-6a6d2a81-57b9-4b5e-8f9e-03fbff29444f"/>
+      <node about="#uuid-24cb22dc-cc63-4c1e-b5b4-d708139a3dcf" id="uuid-24cb22dc-cc63-4c1e-b5b4-d708139a3dcf" otu="uuid-e84d1a08-ca68-48f2-855f-fb8277734f38"/>
+      <node about="#uuid-d3da3764-4046-497c-8caf-eff599a1094c" id="uuid-d3da3764-4046-497c-8caf-eff599a1094c" otu="uuid-b7fef5ac-9329-4814-8932-725d7915c99b"/>
+      <node about="#uuid-867ff014-1e6b-4bbb-8dc8-f620febbfde6" id="uuid-867ff014-1e6b-4bbb-8dc8-f620febbfde6" otu="uuid-02b03343-e2b7-43c5-b74a-4e69cd9fab8e"/>
+      <node about="#uuid-a7431813-cbc6-428e-b925-27a0eabaa1fc" id="uuid-a7431813-cbc6-428e-b925-27a0eabaa1fc" otu="uuid-8af4b4b5-8527-45cf-bcee-6194490bac87"/>
+      <node about="#uuid-30ce5e36-6f20-43c0-9beb-b681e4b7f973" id="uuid-30ce5e36-6f20-43c0-9beb-b681e4b7f973" otu="uuid-6e00e77c-f09a-4f26-8e61-a6b44dc56405"/>
+      <node about="#uuid-95eecda9-3460-417c-9194-1a8f9be396e2" id="uuid-95eecda9-3460-417c-9194-1a8f9be396e2" otu="uuid-1d3c4e3e-208d-46d9-a684-c8881aef3765"/>
+      <edge about="#uuid-55e6feab-4a7b-4b72-bcd4-90097a63b7da" id="uuid-55e6feab-4a7b-4b72-bcd4-90097a63b7da" source="uuid-ccf84785-5b91-468f-8222-fe4d521434d1" target="uuid-9e8a9c87-4c65-4b03-ae51-86749b87a6d6" length="0.29744"/>
+      <edge about="#uuid-7f6d72f5-dede-4186-ade9-f9552aec2f4b" id="uuid-7f6d72f5-dede-4186-ade9-f9552aec2f4b" source="uuid-9e8a9c87-4c65-4b03-ae51-86749b87a6d6" target="uuid-1ed35055-3b8f-40d6-b15c-8e39160b4f50" length="0.04924"/>
+      <edge about="#uuid-db3c33d9-8f07-4b96-828e-bd64512d7f68" id="uuid-db3c33d9-8f07-4b96-828e-bd64512d7f68" source="uuid-1ed35055-3b8f-40d6-b15c-8e39160b4f50" target="uuid-1128454b-4df1-4eef-8351-982ff99f3862" length="0.06859"/>
+      <edge about="#uuid-eb776d2e-2ea9-432c-bae6-73cd41fc89bd" id="uuid-eb776d2e-2ea9-432c-bae6-73cd41fc89bd" source="uuid-1128454b-4df1-4eef-8351-982ff99f3862" target="uuid-6c546e60-12e1-4da8-b415-67ed45ce0123" length="0.13404"/>
+      <edge about="#uuid-cba2c0f8-be10-45b6-9710-cc7eea3bc885" id="uuid-cba2c0f8-be10-45b6-9710-cc7eea3bc885" source="uuid-6c546e60-12e1-4da8-b415-67ed45ce0123" target="uuid-d0eb9637-37bf-4ca0-bad7-8a25725da2b9" length="0.10346"/>
+      <edge about="#uuid-e01760ef-2db9-4a31-972f-66e16bb75e8a" id="uuid-e01760ef-2db9-4a31-972f-66e16bb75e8a" source="uuid-d0eb9637-37bf-4ca0-bad7-8a25725da2b9" target="uuid-95f7e684-80d3-485f-a949-a810097b714c" length="0.0355"/>
+      <edge about="#uuid-b9bd669b-46f3-4a0c-8957-e389b9dde29d" id="uuid-b9bd669b-46f3-4a0c-8957-e389b9dde29d" source="uuid-95f7e684-80d3-485f-a949-a810097b714c" target="uuid-257bb33e-5929-4cb2-98a2-75f491616020" length="0.00917"/>
+      <edge about="#uuid-5d19de27-cf02-433f-85dc-2bc73cd12fce" id="uuid-5d19de27-cf02-433f-85dc-2bc73cd12fce" source="uuid-257bb33e-5929-4cb2-98a2-75f491616020" target="uuid-22989503-2e5e-41dc-9c89-b2e7db58841e" length="0.07333"/>
+      <edge about="#uuid-2290f7f6-e8c2-4463-a9e9-28b312fe0d6d" id="uuid-2290f7f6-e8c2-4463-a9e9-28b312fe0d6d" source="uuid-22989503-2e5e-41dc-9c89-b2e7db58841e" target="uuid-12e70087-a022-4faa-ab61-c4081fdd2a0a" length="0.055"/>
+      <edge about="#uuid-b0c21429-0c10-49d0-9bcf-ba5f5d625373" id="uuid-b0c21429-0c10-49d0-9bcf-ba5f5d625373" source="uuid-12e70087-a022-4faa-ab61-c4081fdd2a0a" target="uuid-5a1df34e-c23d-4296-905b-e71b6f7ad6bc" length="0.055"/>
+      <edge about="#uuid-446d5bf3-a8b5-4ef4-914b-315b3fc3beab" id="uuid-446d5bf3-a8b5-4ef4-914b-315b3fc3beab" source="uuid-12e70087-a022-4faa-ab61-c4081fdd2a0a" target="uuid-63b35ebb-608d-4c09-b868-810df384a04e" length="0.055"/>
+      <edge about="#uuid-1fdb905b-6e13-4842-b4d9-c7ca019fd37c" id="uuid-1fdb905b-6e13-4842-b4d9-c7ca019fd37c" source="uuid-22989503-2e5e-41dc-9c89-b2e7db58841e" target="uuid-dca49943-a8d3-446b-a2c9-46e224cca41c" length="0.11"/>
+      <edge about="#uuid-59e3fb8f-8aa9-4c8c-ba31-e1bfd2797d85" id="uuid-59e3fb8f-8aa9-4c8c-ba31-e1bfd2797d85" source="uuid-257bb33e-5929-4cb2-98a2-75f491616020" target="uuid-ca4b21bd-57f7-4154-9bfc-fbb1b2663492" length="0.18333"/>
+      <edge about="#uuid-58cf64fb-c9ef-4c17-9141-4ded020e1046" id="uuid-58cf64fb-c9ef-4c17-9141-4ded020e1046" source="uuid-95f7e684-80d3-485f-a949-a810097b714c" target="uuid-fd08135d-6779-493a-9e90-5f2b0416eb3b" length="0.1925"/>
+      <edge about="#uuid-10c5d109-e359-4101-b9ec-e9364f37c8ec" id="uuid-10c5d109-e359-4101-b9ec-e9364f37c8ec" source="uuid-d0eb9637-37bf-4ca0-bad7-8a25725da2b9" target="uuid-cc1787c1-468f-454e-9ac8-c3150e10610d" length="0.228"/>
+      <edge about="#uuid-567870de-f738-4f5f-99b4-2563384b9e43" id="uuid-567870de-f738-4f5f-99b4-2563384b9e43" source="uuid-6c546e60-12e1-4da8-b415-67ed45ce0123" target="uuid-80cd18ff-2940-4235-97da-efaa28eb7f64" length="0.24479"/>
+      <edge about="#uuid-07e7f0c3-5659-4f5e-a1d6-50689fdafd12" id="uuid-07e7f0c3-5659-4f5e-a1d6-50689fdafd12" source="uuid-80cd18ff-2940-4235-97da-efaa28eb7f64" target="uuid-617a7ce7-b47c-4320-9002-d40da50ad872" length="0.08667"/>
+      <edge about="#uuid-7e9e8f01-360c-4920-97fc-846ed8789208" id="uuid-7e9e8f01-360c-4920-97fc-846ed8789208" source="uuid-80cd18ff-2940-4235-97da-efaa28eb7f64" target="uuid-597d98db-9d9f-42c3-8b87-b67814e6b587" length="0.05167"/>
+      <edge about="#uuid-e8f360ee-d076-46d7-9226-801314cae57f" id="uuid-e8f360ee-d076-46d7-9226-801314cae57f" source="uuid-597d98db-9d9f-42c3-8b87-b67814e6b587" target="uuid-24e789d5-d6c5-4436-8110-0c30a58e89e0" length="0.015"/>
+      <edge about="#uuid-cf676e34-5fad-4645-b5c3-01c4de4c8758" id="uuid-cf676e34-5fad-4645-b5c3-01c4de4c8758" source="uuid-24e789d5-d6c5-4436-8110-0c30a58e89e0" target="uuid-5271e3c2-64a8-48e3-bf68-3fb5b846cf51" length="0.02"/>
+      <edge about="#uuid-184b6c8a-ea3e-464f-8e62-e3e20ff633a3" id="uuid-184b6c8a-ea3e-464f-8e62-e3e20ff633a3" source="uuid-24e789d5-d6c5-4436-8110-0c30a58e89e0" target="uuid-24cb22dc-cc63-4c1e-b5b4-d708139a3dcf" length="0.02"/>
+      <edge about="#uuid-640277a6-6683-4693-8aee-849f13c1ad0f" id="uuid-640277a6-6683-4693-8aee-849f13c1ad0f" source="uuid-597d98db-9d9f-42c3-8b87-b67814e6b587" target="uuid-d3da3764-4046-497c-8caf-eff599a1094c" length="0.035"/>
+      <edge about="#uuid-5234d059-3f72-4612-af7d-917c62211902" id="uuid-5234d059-3f72-4612-af7d-917c62211902" source="uuid-1128454b-4df1-4eef-8351-982ff99f3862" target="uuid-867ff014-1e6b-4bbb-8dc8-f620febbfde6" length="0.4655"/>
+      <edge about="#uuid-29d83f05-0e5d-4774-9f5f-6f56fb18aa0a" id="uuid-29d83f05-0e5d-4774-9f5f-6f56fb18aa0a" source="uuid-1ed35055-3b8f-40d6-b15c-8e39160b4f50" target="uuid-a7431813-cbc6-428e-b925-27a0eabaa1fc" length="0.53409"/>
+      <edge about="#uuid-fa9f18dc-9a92-4ec3-97f8-b8f7058767ac" id="uuid-fa9f18dc-9a92-4ec3-97f8-b8f7058767ac" source="uuid-9e8a9c87-4c65-4b03-ae51-86749b87a6d6" target="uuid-30ce5e36-6f20-43c0-9beb-b681e4b7f973" length="0.58333"/>
+      <edge about="#uuid-bd1cafc2-3a5a-4667-b8ae-797e2e59e8d8" id="uuid-bd1cafc2-3a5a-4667-b8ae-797e2e59e8d8" source="uuid-ccf84785-5b91-468f-8222-fe4d521434d1" target="uuid-95eecda9-3460-417c-9194-1a8f9be396e2" length="0.88077"/>
+    </tree>
+  </trees>
+  <characters xsi:type="nex:ContinuousCells" about="#uuid-b13c2b49-fe27-420f-b6f2-88b0faa5bc70" id="uuid-b13c2b49-fe27-420f-b6f2-88b0faa5bc70" otus="uuid-f35e68e0-e2e0-4017-bebc-fe20a1e67e02">
+    <format>
+      <char about="#uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" label="wingL" id="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12"/>
+      <char about="#uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" label="tarsusL" id="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec"/>
+      <char about="#uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" label="culmenL" id="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a"/>
+      <char about="#uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" label="beakD" id="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6"/>
+      <char about="#uuid-9ef40911-609b-4752-ad10-057787d9f380" label="gonysW" id="uuid-9ef40911-609b-4752-ad10-057787d9f380"/>
+    </format>
+    <matrix>
+      <row about="#uuid-1814814d-07f3-4113-85eb-fa595154bfbf" label="magnirostris" id="uuid-1814814d-07f3-4113-85eb-fa595154bfbf" otu="uuid-3e206b36-94dd-4b49-add5-c735dcaeff13">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.4042"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="3.03895"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.724667"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.823767"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="2.675983"/>
+      </row>
+      <row about="#uuid-92cabf88-45a2-4df5-bdef-03f071f4ff9e" label="conirostris" id="uuid-92cabf88-45a2-4df5-bdef-03f071f4ff9e" otu="uuid-25f032cd-88e4-4e2f-afa5-8777c5f4bd54">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.349867"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.9842"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.6544"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.5138"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="2.360167"/>
+      </row>
+      <row about="#uuid-7b467ed2-a092-4d45-939f-1d302fc0d142" label="difficilis" id="uuid-7b467ed2-a092-4d45-939f-1d302fc0d142" otu="uuid-ac66ddd7-5f07-4758-a550-19d92f988521">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.224067"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.898917"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.277183"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.0111"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.929983"/>
+      </row>
+      <row about="#uuid-78a8f575-bd9c-4633-b7e0-9d805d7a73a5" label="scandens" id="uuid-78a8f575-bd9c-4633-b7e0-9d805d7a73a5" otu="uuid-65af3c07-738d-4fa1-b3b2-fb00abe54471">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.261222"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.929033"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.621789"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.1447"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="2.036944"/>
+      </row>
+      <row about="#uuid-de07e677-73e3-4ee1-aa01-0e7b6eac27b3" label="fortis" id="uuid-de07e677-73e3-4ee1-aa01-0e7b6eac27b3" otu="uuid-ee8d3430-e305-4e10-9b61-04c3ef9c918f">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.244008"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.894717"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.407025"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.362658"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="2.221867"/>
+      </row>
+      <row about="#uuid-83d4d97e-3e5a-4d78-b878-5aca2f4a79bc" label="fuliginosa" id="uuid-83d4d97e-3e5a-4d78-b878-5aca2f4a79bc" otu="uuid-7a324995-3cd9-42c8-bb0f-4d853457434a">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.132957"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.806514"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.094971"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="1.941157"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.845379"/>
+      </row>
+      <row about="#uuid-e4c62762-2de1-4e11-8228-175b78b6d173" label="pallida" id="uuid-e4c62762-2de1-4e11-8228-175b78b6d173" otu="uuid-7aed2a19-02dd-4cb1-a22b-4b6a56acff7a">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.265425"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="3.08945"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.43025"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.01635"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.949125"/>
+      </row>
+      <row about="#uuid-47bd9673-ee11-4183-8625-d16f0c6904d8" label="fusca" id="uuid-47bd9673-ee11-4183-8625-d16f0c6904d8" otu="uuid-8af4b4b5-8527-45cf-bcee-6194490bac87">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="3.975393"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.936536"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.051843"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="1.191264"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.401186"/>
+      </row>
+      <row about="#uuid-f86d312a-bcdd-4fb6-a977-2a1ff52df8cd" label="parvulus" id="uuid-f86d312a-bcdd-4fb6-a977-2a1ff52df8cd" otu="uuid-6a6d2a81-57b9-4b5e-8f9e-03fbff29444f">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.1316"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.97306"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="1.97442"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="1.87354"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.81334"/>
+      </row>
+      <row about="#uuid-176b3983-c095-4aaa-8ede-09771cffdb23" label="pauper" id="uuid-176b3983-c095-4aaa-8ede-09771cffdb23" otu="uuid-b7fef5ac-9329-4814-8932-725d7915c99b">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.2325"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="3.0359"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.187"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.0734"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.9621"/>
+      </row>
+      <row about="#uuid-c435512a-e583-4de3-b1bf-4cbddaae7939" label="Pinaroloxias" id="uuid-c435512a-e583-4de3-b1bf-4cbddaae7939" otu="uuid-6e00e77c-f09a-4f26-8e61-a6b44dc56405">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.1886"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="2.9802"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.3111"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="1.5475"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="1.6301"/>
+      </row>
+      <row about="#uuid-486573d2-46d3-4b9b-8a9f-1bc964d01f3d" label="Platyspiza" id="uuid-486573d2-46d3-4b9b-8a9f-1bc964d01f3d" otu="uuid-02b03343-e2b7-43c5-b74a-4e69cd9fab8e">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.419686"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="3.270543"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.331471"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.347471"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="2.282443"/>
+      </row>
+      <row about="#uuid-24e32411-b3e4-4b58-a224-745b711bbd25" label="psittacula" id="uuid-24e32411-b3e4-4b58-a224-745b711bbd25" otu="uuid-e84d1a08-ca68-48f2-855f-fb8277734f38">
+        <cell char="uuid-7c5cc76a-14e3-42c1-8405-acfa10615e12" state="4.23502"/>
+        <cell char="uuid-8b246b56-3dd7-45c6-b012-67c37c3b6eec" state="3.04912"/>
+        <cell char="uuid-83a05d91-7671-4c7e-99f5-0e034cb8b67a" state="2.25964"/>
+        <cell char="uuid-5d5b2cda-952d-4ca6-8a9b-2861523e77f6" state="2.23004"/>
+        <cell char="uuid-9ef40911-609b-4752-ad10-057787d9f380" state="2.07394"/>
+      </row>
+    </matrix>
+  </characters>
+</nex:nexml>

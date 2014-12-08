@@ -1,0 +1,119 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   Gemfile
+	new file:   app/assets/images/searchfade-repeat-2.png
+	new file:   app/controllers/frame_experiment_controller.rb
+	new file:   app/views/assets/_control_sharing_form.html.erb
+	new file:   app/views/assets/_frames_upload_box.html.erb
+	new file:   app/views/assets/_treatment_sharing_form.html.erb
+	new file:   app/views/frame_experiment/awareness.erb
+	new file:   app/views/frame_experiment/consent.erb
+	new file:   app/views/frame_experiment/debrief.erb
+	new file:   app/views/frame_experiment/demographics.erb
+	new file:   app/views/frame_experiment/first_treatment.erb
+	new file:   app/views/frame_experiment/information.erb
+	new file:   app/views/frame_experiment/instructions.erb
+	new file:   app/views/frame_experiment/usability_ask.erb
+	new file:   app/views/frame_experiment/washout.erb
+	new file:   app/views/frame_experiment/washout_instructions.erb
+	new file:   app/views/layouts/frame_experiment.erb
+	new file:   app/views/participants/new.html.erb
+	new file:   lib/planout/planout.rb
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Gemfile
+	modified:   Gemfile.lock
+	modified:   app/assets/stylesheets/styles.css.erb
+	modified:   app/controllers/data_files_controller.rb
+	modified:   app/controllers/frame_experiment_controller.rb
+	modified:   app/controllers/homes_controller.rb
+	modified:   app/views/assets/_asset_form_bottom.html.erb
+	modified:   app/views/assets/_control_sharing_form.html.erb
+	modified:   app/views/assets/_frames_upload_box.html.erb
+	modified:   app/views/assets/_sharing_form.html.erb
+	modified:   app/views/assets/_treatment_sharing_form.html.erb
+	modified:   app/views/data_files/new.html.erb
+	modified:   app/views/frame_experiment/awareness.erb
+	modified:   app/views/frame_experiment/consent.erb
+	modified:   app/views/frame_experiment/debrief.erb
+	deleted:    app/views/frame_experiment/demographics.erb
+	deleted:    app/views/frame_experiment/first_treatment.erb
+	modified:   app/views/frame_experiment/information.erb
+	modified:   app/views/frame_experiment/instructions.erb
+	modified:   app/views/frame_experiment/usability_ask.erb
+	modified:   app/views/frame_experiment/washout.erb
+	modified:   app/views/frame_experiment/washout_instructions.erb
+	modified:   app/views/gadgets/_new_object_gadget.html.erb
+	modified:   app/views/homes/_home_activity_notifications.html.erb
+	modified:   app/views/homes/_home_contents.html.erb
+	modified:   app/views/institutions/index.html.erb
+	modified:   app/views/layouts/_head.html.erb
+	modified:   app/views/layouts/_header_main.html.erb
+	modified:   app/views/layouts/_header_text_main.html.erb
+	modified:   app/views/layouts/_sidebar.html.erb
+	modified:   app/views/layouts/frame_experiment.erb
+	modified:   app/views/participants/new.html.erb
+	modified:   config/routes.rb
+	modified:   db/schema.rb
+	modified:   lib/planout/planout.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	FrameExperiment
+	FramingExp
+	Planout
+	app/assets/images/._left_logo_control.png
+	app/assets/images/._left_logo_treatment.png
+	app/assets/images/._quotes-left.svg
+	app/assets/images/._right_logo_treatment.png
+	app/assets/images/._searchfade-control.jpg
+	app/assets/images/._searchfade-treatment.jpg
+	app/assets/images/left_logo_control.png
+	app/assets/images/left_logo_treatment.png
+	app/assets/images/quotes-left.png
+	app/assets/images/quotes-left.svg
+	app/assets/images/right_logo_treatment.png
+	app/assets/images/searchfade-control.jpg
+	app/assets/images/searchfade-repeat-2.jpg
+	app/assets/images/searchfade-treatment.jpg
+	app/assets/javascripts/participants.js
+	app/assets/stylesheets/participants.css
+	app/controllers/new_feedbacks_controller.rb
+	app/controllers/participants_controller.rb
+	app/helpers/new_feedbacks_helper.rb
+	app/helpers/participants_helper.rb
+	app/models/participant.rb
+	app/views/frame_experiment/new_feedback.erb
+	app/views/frame_experiment/scenario.erb
+	app/views/frame_experiment/splash_screen.erb
+	app/views/layouts/application_bootstrap.html.erb
+	app/views/new_feedbacks/
+	app/views/participants/index.html.erb
+	config/initializers/simple_form.rb
+	config/initializers/simple_form_bootstrap.rb
+	config/locales/simple_form.en.yml
+	db/migrate/20141123144646_create_participants.rb
+	db/migrate/20141123174919_participant.rb
+	db/migrate/20141123175454_participants.rb
+	db/migrate/20141123180019_add_materials_type_to_participants.rb
+	db/migrate/20141123180701_add_details_to_participants.rb
+	la
+	lib/templates/
+	lol
+	lol2
+	lol3
+	public/._mydataset.csv
+	public/mydataset.csv
+	test/fixtures/participants.yml
+	test/functional/participants_controller_test.rb
+	test/unit/helpers/participants_helper_test.rb
+	test/unit/participant_test.rb
+

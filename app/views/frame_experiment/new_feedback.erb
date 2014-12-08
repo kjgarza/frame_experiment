@@ -1,0 +1,97 @@
+<%= link_to 'Continue', frame_experiment_usability_ask_path, class:"btn btn-primary btn-lg pull-right" %>
+
+
+<div class="container">
+  <h3>Your Datasets</h3>
+<div>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Dataset</th>
+    <th>Creators</th>
+    <th>Sharing Preferences</th>
+    <th>DOI</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr  class="success">
+    <td>1</td>
+    <td>Flux_analysis_B_subtilis_chemostat_osmoprotection</td>
+    <td>Eric Gersten</td>
+    <td><img src="http://i.imgur.com/K0vv79b.png" width="19"></td>
+    <td><%= "http://dx.doi.org/"+String(rand(6070...8039))+"/m9.share."+String(rand(11000...22000)) %></td>
+  </tr>
+  </tr>
+  <tr class="danger">
+    <td>2</td>
+    <td>Comparison of BY4741 and W303 deletion mutants (nha1, ena1-4/5)</td>
+    <td>Katie Jennings, Eric Gersten</td>
+    <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+    <td></td>
+  </tr>
+  <tr class="danger">
+    <td>3</td>
+    <td>RNA-seq delta greA</td>
+    <td>Eric Gersten, Manuela Sanger, Ellis Leach </td>
+    <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+  <h3>Your Collaborators' Datasets</h3>
+
+<div>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Uploader</th>
+      <th>Dataset</th>
+      <th>Creators</th>
+      <th>Sharing Preferences</th>
+      <th>DOI</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="success">
+      <td>Dale Santos</td>
+      <td>Overview intracellular mRNA amount and concentration xynP</td>
+      <td>Dale Santos, Manuela Sanger</td>
+      <td><img src="http://i.imgur.com/K0vv79b.png" width="19"></td>
+      <td><%= "http://dx.doi.org/"+String(rand(6070...8039))+"/m9.share."+String(rand(11000...22000)) %></td>
+    </tr>
+    <tr class="danger">
+      <td>Manuela Sanger</td>
+      <td>Trancriptome data - RNA processing in Bacillus subtilis: identification of targets of the essential RNase Y</td>
+      <td>Manuela Sanger</td>
+      <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+      <td> </td>
+    </tr>
+    <tr class="success">
+      <td>Katie Jennings</td>
+      <td>Lactobacillus plantarum NC8 protein list</td>
+      <td>Katie Jennings</td>
+      <td><img src="http://i.imgur.com/K0vv79b.png" width="19"></td>
+      <td><%= "http://dx.doi.org/"+String(rand(6070...8039))+"/m9.share."+String(rand(11000...22000)) %></td>
+    </tr>
+
+    <tr class="success">
+      <td>Ellis Leach</td>
+      <td>Localization of Pma1-GFP</td>
+      <td>Ellis Leach, Nicole Fink, Sebastian Müller</td>
+      <td><img src="http://i.imgur.com/K0vv79b.png" width="19"></td>
+      <td><%= "http://dx.doi.org/"+String(rand(6070...8039))+"/m9.share."+String(rand(11000...22000)) %></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+<%= link_to 'Continue', frame_experiment_usability_ask_path, class:"btn btn-primary btn-lg pull-right" %>
+
+
