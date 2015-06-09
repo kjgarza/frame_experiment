@@ -10,21 +10,75 @@
 <%# initialization: required to keep javascript independent of the access type codes, to allow the use the constants instead -%>
 <%= render :partial=>"assets/sharing_constants" %>
 
+
+
+<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">-->
+<!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+<!--<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+<!--&lt;!&ndash;<link rel="stylesheet" href="/resources/demos/style.css">&ndash;&gt;-->
+
 <script type="text/javascript">
 
-    jQuery('#with_who_1').on('click', function () {
-        alert("Hello\nHow are you?");
-//        var d = jQuery('input[id="with_who_3"]');
-//
-//    if(d[0].checked){
-//        jQuery(".cals").show();
-//    }
-//    else{
-//        jQuery(".cals").hide();
-//    }
-    });
+    function hidewhen_to(){
+        var d = jQuery('input[id="with_who_3"]');
+        var d2 = jQuery('input[id="with_who_2"]');
+        var d3 = jQuery('input[id="with_who_4"]');
+//        if((d[0].checked == true) || (d2[0].checked == true) ){
+        if((d[0].checked == true) || (d2[0].checked == true) || (d3[0].checked == true)){
+            jQuery(".cals").show();
+            jQuery('input[name="when_to"]').each( function(){
+                this.required = true;
+            });
+        }
+        else{
+            jQuery(".cals").hide();
+            jQuery('input[name="when_to"]').each( function(){
+                this.required = false;
+            });
+            jQuery('#sandbox-container input')[0].setValue("")
+
+        }
+    }
+
+    function show_dp() {
+        var d2 = jQuery('input[id="check_yes"]');
+        jQuery('#sandbox-container input')[0].show()
+        if (d2[0].checked != true) {
+            jQuery('#sandbox-container input')[0].setValue("")
+            jQuery('#sandbox-container input')[0].required = false
+            jQuery('#check_yes')[0].required = false
+            jQuery('#mydate').text('');
+        }
+        else {
+            jQuery('#check_yes')[0].required = true
+            jQuery('#sandbox-container input')[0].required = true
+            var d = jQuery('#sandbox-container input')[0].value;
+            jQuery('#mydate').text(d);
+        }
+
+    }
+
+        function boxchange() {
+            var d2 = jQuery('input[id="check_yes"]');
+            if (d2[0].checked != true) {
+                jQuery('#mydate').text('');
+            }
+            else {
+                var d = jQuery('#sandbox-container input')[0].value;
+                jQuery('#mydate').text(d);
+            }
+        }
+
+
+        function checkmyradio(){
+            jQuery('input[id="check_yes"]')[0].checked = true;
+        }
 
 </script>
+
+
+
+
 
 <%# this hidden input will submit all permission data with the form -%>
 <%= hidden_field_tag "sharing[permissions][contributor_types]", "" -%>
@@ -36,32 +90,78 @@
 <div class="panel panel-default">
   <div class="panel-body">
 
-    <!-- Latest compiled and minified CSS -->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">-->
 
 
-    <!-- Latest compiled and minified JavaScript -->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
-
-    <!--<div class="container">-->
-
-    <h4> Sharing with</h4>
+    <h4> Select sharing preferences:</h4>
     <!--<div class="col-md-3"></div>-->
     <div class="">
     <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
       <label class="btn btn-primary" style="margin-bottom:4px; white-space:normal;">
-        <input name="with_who" value="public"  type="radio" required>All visitors
+        <!--<input name="with_who" value="public"  type="radio" required>Share with All visitors-->
+        <input name="with_who" value="public"  onchange="hidewhen_to();"  id="with_who_1" type="radio" required>
+        <%=  session[:planout_data][:template][:with_who_options][0] %>
+
       </label>
-      <label class="btn btn-primary" style="margin-bottom:4px; white-space:normal;">
-        <input name="with_who" value="collaborators" type="radio" required>Share with my Collaborators
+      <label class="btn btn-primary" title="It might include people you don't know personally"
+              style="margin-bottom:4px; white-space:normal;">
+        <input name="with_who" value="stakeholders"  onchange="hidewhen_to();" id="with_who_4" type="radio" required>
+        <%=  session[:planout_data][:template][:with_who_options][1] %>
+      </label>
+      <label class="btn btn-primary" title="Includes only people you collaborate with"
+             style="margin-bottom:4px; white-space:normal;">
+        <input name="with_who" value="collaborators"  onchange="hidewhen_to();" id="with_who_2" type="radio" required>
+        <%=  session[:planout_data][:template][:with_who_options][2] %>
       </label>
       <label class="btn btn-primary" style="margin-bottom:4px; white-space:normal; ">
-        <input name="with_who" value="private" type="radio" required>Keep this Data file private (only visible to me)
+        <input name="with_who" value="private"  onchange="hidewhen_to();" id="with_who_3" type="radio" required>
+        <%=  session[:planout_data][:template][:with_who_options][3] %>
       </label>
     </div>
     </div>
     <!--<div class="col-md-3"></div>-->
-    <input name="when_to" value="is_control"  type="radio" checked style="display:none;">
+    <!--<input name="when_to" value="is_control"  type="radio" checked style="display:none;">-->
+
+    <br>
+
+    <div class="cals pull-left  " style="display:none;">
+      <h4> You can share with the Public in the future by scheduling a sharing date.
+        Would you like to do that? </h4>
+
+          <div class="form-group pull-left">
+            <div class="radio pull-left">
+              <label>
+                <input type="radio"  id="check_yes" name="when_to"  onclick="show_dp();"  required>
+                Yes, Schedule to:
+                <!--<input name="when_to" id="picker" class="monthYearPicker" />-->
+                <!--<input type="text" data-provide='datepicker' name="when_to" id="datepickerish" data-date-format="mm/yyyy" data-date-start-view=1  required>-->
+              </label>
+              <div id="mydate"> </div>
+              <div id="sandbox-container">
+                <input type="text" type="text" class="form-control" name="when_to" required onchange="boxchange();" onclick="checkmyradio();">
+              </div>
+
+
+              <!--<div class="input-group date">-->
+                <!--<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>-->
+              <!--</div>-->
+            </div>
+
+
+            </br>
+            <div class="radio pull-left">
+              <label>
+                <input type="radio" name="when_to"  id="check_no" value="later" onclick="show_dp();" required>
+                No, I'll share it myself later
+              </label>
+            </div>
+          </div>
+      </div>
+
+
+
+
+
+
 
   </div>
 </div>
@@ -80,10 +180,10 @@
 
 
 <div class="">
-  <!--<p>-->
-  <!--Here you can specify who can <b>view</b> the summary of<% if @resource.is_downloadable? %>, <b>get</b> access to the content of,<% end %> and <b>edit</b> the <%= @resource_type -%>.-->
-  <!--<%= link_to_function(("More info " + expand_image).html_safe, visual_effect(:toggle_blind, "more_sharing_info", :duration => 0.3)) -%>-->
-  <!--</p>-->
+  <p>
+  Here you can specify who can <b>view</b> the summary of<% if @resource.is_downloadable? %>, <b>get</b> access to the content of,<% end %> and <b>edit</b> the <%= @resource_type -%>.
+  <%= link_to_function(("More info " + expand_image).html_safe, visual_effect(:toggle_blind, "more_sharing_info", :duration => 0.3)) -%>
+  </p>
   <div id="more_sharing_info" class="box_simple" style="display: none;">
     You may:
     <ul style="padding-left:1em;">
@@ -445,4 +545,28 @@
     <% if !disable_advanced_view -%>
     updateCustomSharingSettings();
     <% end %>
+</script>
+
+<script>
+
+    jQuery('#sandbox-container input').datepicker({
+//    jQuery('#sandbox-container div').datepicker({
+        format: "mm/yyyy",
+        weekStart: 0,
+        startView: 1,
+        clearBtn: true,
+        minViewMode: 1,
+//        autoclose: true,
+        todayHighlight: true
+    });
+
+//    jQuery('#sandbox-container .input-group.date').datepicker({
+//        format: "mm/yyyy",
+//        weekStart: 0,
+//        startView: 1,
+//        minViewMode: 1,
+//        clearBtn: true,
+//        todayHighlight: true
+//    });
+
 </script>

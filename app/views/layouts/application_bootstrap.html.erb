@@ -17,6 +17,8 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
+
+
   <%= csrf_meta_tag %>
 
   <% if is_front_page? && !Seek::Config.is_virtualliver%>
@@ -41,7 +43,7 @@
       #topbar {
           text-align: center;
           height: 40px;
-          background-image: url("<%= asset_path(Planout.instance.get[:template][:searchfade_repeat]) %>");
+          background-image: url("<%= asset_path(session[:planout_data][:template][:searchfade_repeat]) %>");
           background-repeat: repeat-x;
           background-position: top center;
           padding: 10px 0;
@@ -49,34 +51,34 @@
       }
 
       body{
-          padding-top: 135px;
+          padding-top: 155px;
       }
 
       #myexp_sidebar {
           /*padding: 10px 0 0 0;*/
           padding: 10px 0.5em 1px 0.5em;
-          background-color: #<%= Planout.instance.get[:template][:color] %>;
+          background-color: #<%= session[:planout_data][:template][:color] %>;
           border-right: 1px solid #DEDEDE;
           border-width: 0 0 1px 1px;
           width: 100%;
       }
 
       div.home_panel .heading {
-          background-color: #<%= Planout.instance.get[:template][:color] %>;
+          background-color: #<%= session[:planout_data][:template][:color] %>;
       }
 
       .menutabs li a:link {
-          background: none repeat scroll 0 0 #<%= Planout.instance.get[:template][:color] %>;
+          background: none repeat scroll 0 0 #<%= session[:planout_data][:template][:color] %>;
           border: 0 none;
           color: #ffffff;
       }
 
       #curved_top {
-          background-color: #<%= Planout.instance.get[:template][:color] %>;
+          background-color: #<%= session[:planout_data][:template][:color] %>;
       }
 
       .menutabs li a:visited {
-          background: none repeat scroll 0 0 #<%= Planout.instance.get[:template][:color] %>;
+          background: none repeat scroll 0 0 #<%= session[:planout_data][:template][:color] %>;
           color: #ffffff;
       }
 
@@ -223,6 +225,9 @@
 <!--<script src="../../dist/js/bootstrap.min.js"></script>-->
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+
+
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 <script src="offcanvas.js"></script>
@@ -235,6 +240,10 @@
 <%= analytics_init if Seek::Config.google_analytics_enabled %>
 
 </body>
+
+
+
+
 </html>
 
 

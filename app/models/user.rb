@@ -265,6 +265,15 @@ class User < ActiveRecord::Base
     self.reset_password_code =  Digest::SHA1.hexdigest( "#{user.email}#{Time.now.to_s.split(//).sort_by {rand}.join}" )
   end
 
+  def set_planout(experiment)
+    @planout = experiment
+  end
+
+  def get_planout
+    return @planout
+  end
+
+
   protected
   # before filter
   def encrypt_password

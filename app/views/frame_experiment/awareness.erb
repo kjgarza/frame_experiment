@@ -1,3 +1,15 @@
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-8283001-3', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
 <div class="jumbotron">
   <h1>Some final questions</h1>
   <p>...</p>
@@ -10,7 +22,7 @@
     <div class="control-group radio_buttons optional lead">
       <label class="radio_buttons optional control-label">
 
-        I have never attended an academic course in my entered life.
+        I have never attended an academic course in my entire life.
       </label>
 
       <div class="control">
@@ -48,11 +60,11 @@
       <div class="control">
 
 
-        <%= radio_button_tag(:trust, "jam") %>
-        <%= label_tag(:trust_jam, "JamShare Data") %>
+        <%= radio_button_tag(:trust, "first") %>
+        <%= label_tag(:trust_first, "First one") %>
         <br/>
-        <%= radio_button_tag(:trust, "cite") %>
-        <%= label_tag(:trust_cite, "Cite DataLabour") %>
+        <%= radio_button_tag(:trust, "second") %>
+        <%= label_tag(:trust_second, "Second one") %>
 
 
       </div>
@@ -61,26 +73,132 @@
 
 
 
-    <div class="control-group radio_buttons optional lead">
-      <label class="radio_buttons optional control-label">
+    <div class="control-group check_boxes optional lead">
+      <label class="check_boxes optional control-label">
 
         Some sentences appeared in the upload form in the websites you visited, can you identify any of them?
       </label>
 
-      <div class="control">
+      <div class="controls">
 
-        <%= check_box_tag(:awareness, "1") %>
+        <%= check_box_tag 'awareness[]', '1' %>
         <%= label_tag(:awareness_1, "77% of the community makes their materials citable within 3 years.") %>
         <br/>
 
-        <%= check_box_tag(:awareness, "2") %>
+        <%= check_box_tag 'awareness[]', '2' %>
         <%= label_tag(:awareness_2, "69% the community shares their materials") %>
         <br/>
 
-
-        <%= check_box_tag(:awareness, "3") %>
+        <%= check_box_tag 'awareness[]', '3' %>
         <%= label_tag(:awareness_3, "Publicly available data is significantly associated with a 69% increase in citations.") %>
+        <br/>
 
+
+        <%= check_box_tag 'awareness[]', '4' %>
+        <%= label_tag(:awareness_4, "None of the above") %>
+
+      </div>
+    </div>
+    <br/>
+
+
+
+    <div class="control-group check_boxes optional lead">
+      <label class="check_boxes optional control-label">
+
+        In which way(s) do you share digital material with researchers outside of your institution?
+      </label>
+
+      <div class="controls">
+
+        <%= check_box_tag 'ways[]', '1' %>
+        <%= label_tag(:ways_1, "when  I am requested for the data") %>
+        <br/>
+
+        <%= check_box_tag 'ways[]', '2' %>
+        <%= label_tag(:ways_2,"by uploading it in an open repository") %>
+        <br/>
+
+        <%= check_box_tag 'ways[]', '3' %>
+        <%= label_tag(:ways_3, "by uploading it in my (or my institution's) website") %>
+        <br/>
+
+        <%= check_box_tag 'ways[]', '4' %>
+        <%= label_tag(:ways_4, "I have never shared materials openly") %>
+
+
+      </div>
+    </div>
+    <br/>
+
+
+
+
+
+    <div class="control-group radio_buttons optional lead">
+      <label class="radio_buttons optional control-label">
+
+        When is the best time to make your materials available to the scientific community?
+      </label>
+
+      <div class="control">
+
+
+        <%=  radio_button_tag "when_best", '1' %>
+        <%= label_tag(:when_best_1, "+10 years after publication of a peer-review paper") %>
+        <br/>
+
+        <%=  radio_button_tag "when_best", '2' %>
+        <%= label_tag(:when_best_2, "+5 years after publication of a peer-review paper") %>
+        <br/>
+        <%=  radio_button_tag "when_best", '3' %>
+        <%= label_tag(:when_best_3, "+3 years after publication of a peer-review paper") %>
+        <br/>
+        <%=  radio_button_tag "when_best", '4' %>
+        <%= label_tag(:when_best_4, "+1 years after publication of a peer-review paper") %>
+        <br/>
+        <%=  radio_button_tag "when_best", '5' %>
+        <%= label_tag(:when_best_5, "immediately after publication of a peer-review paper") %>
+        <br/>
+        <%=  radio_button_tag "when_best", '6' %>
+        <%= label_tag(:when_best_6, "before publication of a peer-review paper") %>
+        <br/>
+
+
+      </div>
+    </div>
+    <br/>
+
+
+
+
+    <div class="control-group radio_buttons optional lead">
+      <label class="radio_buttons optional control-label">
+
+        How frequently do you upload materials for open access?
+      </label>
+
+      <div class="control">
+
+        <%=  radio_button_tag "frequency", '1' %>
+        <%= label_tag(:frequency_1, "every month") %>
+        <br/>
+
+        <%=  radio_button_tag "frequency", '2' %>
+        <%= label_tag(:frequency_2, "every three months") %>
+        <br/>
+
+        <%=  radio_button_tag "frequency", '3' %>
+        <%= label_tag(:frequency_3, "every six months") %>
+        <br/>
+
+        <%=  radio_button_tag "frequency", '4' %>
+        <%= label_tag(:frequency_4, "once a year") %>
+        <br/>
+
+        <%=  radio_button_tag "frequency", '5' %>
+        <%= label_tag(:frequency_5, "never") %>
+        <br/>
 
       </div>
     </div>
@@ -91,10 +209,32 @@
     <div class="form-group lead">
       <div class="checkbox">
         <label>
+          <input type="checkbox" id="updating" name="updating" data-error="Before you wreck yourself">
+          Do you ever change or update materials you have previously uploaded?
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group lead">
+      <div class="checkbox">
+        <label>
           <input type="checkbox" id="honest" name="honest" data-error="Before you wreck yourself">
           In your honest opinion, should we use your responses in our analyses in this study?
         </label>
         <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+
+    <div class="form-group lead">
+      <div class="input">
+        <label>
+    Write your email to participate in the draw of Amazon vouchers:
+    <input type="email" name="email" id="email">
+          </label>
       </div>
     </div>
 

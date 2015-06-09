@@ -1,0 +1,33 @@
+
+<div class="col-md-4"></div>
+<div class="col-md-4" style="height: 200px;"></div>
+<div class="col-md-4"></div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4" style="height: 200px;"><svg width="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55"
+          x="60"
+          y="30"
+          style="stroke:none; fill:#000000;"
+          transform="rotate(30)">
+      R
+    </text>
+  </svg></div>
+  <div class="col-md-4"></div>
+
+</div>
+
+
+<div class="row" >
+  <div class="col-md-4"><%= link_to 'Normal', next_wizard_path(:website => '2nd')  , class:"btn btn-info btn-lg" %>
+  </div>
+  <div class="col-md-4" style="height: 100px;"></div>
+  <div class="col-md-4"><%= link_to 'Backwards', next_wizard_path(:website => '2nd') , class:"btn btn-info btn-lg" %>
+  </div>
+</div>
+
+

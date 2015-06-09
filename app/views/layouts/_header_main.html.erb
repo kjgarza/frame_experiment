@@ -5,9 +5,30 @@ logged_in_class = logged_in_and_registered? ? "class=logged_in" : ""
 
 <% cache "header_#{logged_in_and_registered?}" do -%>
 
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8283001-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
+
+    <link href="chardinjs/chardinjs.css" rel="stylesheet">
+    <script src="chardinjs/chardinjs.min.js"></script>
+
+
+    <%= render :partial=>session[:planout_data][:template][:help] %>
+
+
     <ul id="header">
       <li id="seek_logo">
-        <%= link_to image_tag(Planout.instance.get[:template][:left_logo], :alt => Seek::Config.application_name, :title => tooltip_title_attrib(Seek::Config.application_name)),
+        <%= link_to image_tag(session[:planout_data][:template][:left_logo], :alt => Seek::Config.application_name, :title => tooltip_title_attrib(Seek::Config.application_name)),
                     root_path %>
       </li>
 
@@ -17,9 +38,12 @@ logged_in_class = logged_in_and_registered? ? "class=logged_in" : ""
 
       <li id="image_block" <%= logged_in_class -%>>
             <% if Seek::Config.header_image_enabled %>
-                <%= link_to image_tag(Planout.instance.get[:template][:right_logo], :alt => Seek::Config.header_image_link, :title => Seek::Config.header_image_title),Seek::Config.header_image_link,:class=>"logo_link" %>
+                <%= link_to image_tag(session[:planout_data][:template][:right_logo], :alt => Seek::Config.header_image_link, :title => Seek::Config.header_image_title),Seek::Config.header_image_link,:class=>"logo_link" %>
             <% end %>
       </li>
     </ul>
+
+
+
 
 <% end -%>

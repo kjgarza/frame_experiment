@@ -5,7 +5,7 @@
     us by sharing this experment with colleagues.</p>
   <a class="twitter-share-button pull-right" data-dnt="true" data-hashtags=
           "planout" data-related="kriztean" data-size="large" data-url=
-             "http://127.0.0.1:3025/frame_experiment/" href=
+             "http://seek.cs.man.ac.uk:8080/frame_experiment/" href=
              "https://twitter.com/share">Tweet</a> <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 </script>
@@ -41,20 +41,82 @@
                                                              "mailto:kristian.garzagutierrez@manchester.ac.uk">kristian.garzagutierrez@manchester.ac.uk</a></p>
   <p><strong>Thanks for participating in the study.</strong> Feel to share the
     link to this experiment <a href=
-                                       "http://www.seek.cs.man.ac.uk">(http://seek.cs.man.ac.uk/)</a>
+                                       "http://seek.cs.man.ac.uk:8080/frame_experiment">(http://seek.cs.man.ac.uk:8080/frame_experiment)</a>
     with anyone who may be interested (though we would appreciate it if you didn't
     talk about the demand characteristics manipulation with anyone who hasn't yet
     completed the study).</p>
 </div>
 <div class="container">
   <div class="row">
-    <%= link_to 'Again', frame_experiment_path(:instructions) , class:"btn btn-primary pull-right btn-lg" %><a class="twitter-share-button"
+    <%= link_to 'Again', frame_experiment_path(:scenario) , class:"btn btn-primary pull-right btn-lg" %><a class="twitter-share-button"
        data-dnt="true" data-hashtags="planout" data-related="kriztean" data-size=
-          "large" data-url="http://127.0.0.1:3025/frame_experiment/" href=
+          "large" data-url="http://seek.cs.man.ac.uk:8080/frame_experiment" href=
                "https://twitter.com/share">Tweet</a> <script>
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
   </script> <script src="//platform.linkedin.com/in.js" type="text/javascript">
       lang: en_US
   </script> <script data-counter="top" data-url=
-          "http://127.0.0.1:3025/frame_experiment/consent" type="IN/Share"></script></div>
+          "http://seek.cs.man.ac.uk:8080/frame_experiment" type="IN/Share"></script></div>
 </div>
+
+
+<script>
+
+
+//    jQuery('.datepicker').datepicker({
+//        format: "mm/yyyy",
+//        startView: 1
+//    });
+</script>
+
+
+
+
+<!--<input data-provide="datepicker">-->
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">-->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+<script>
+
+
+
+
+//    jQuery('.datepicker').datepicker({
+//        format: 'mm/dd/yyyy',
+//        startDate: '-3d'
+//    })
+//
+
+//    $(function() {
+//        $('.monthYearPicker').datepicker({
+//            changeMonth: true,
+//            changeYear: true,
+//            showButtonPanel: true,
+//            dateFormat: 'MM yy'
+//        }).focus(function() {
+//            var thisCalendar = $(this);
+//            $('.ui-datepicker-calendar').detach();
+//            $('.ui-datepicker-close').click(function() {
+//                var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+//                var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+//                thisCalendar.datepicker('setDate', new Date(year, month, 1));
+//            });
+//        });
+//    });
+</script>
+<!--<div>-->
+  <!--<label for="myDate">Date :</label>-->
+  <!--<input name="myDate" class="monthYearPicker" />-->
+<!--</div>-->

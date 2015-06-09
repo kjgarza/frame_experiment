@@ -6,7 +6,7 @@
   <!-- Optional theme -->
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
 
 
 
@@ -21,8 +21,8 @@
         <th class="col-md-1">#</th>
         <th class="col-md-2">Dataset</th>
         <th class="col-md-3">Creators</th>
-        <th class="col-md-1">Sharing Preferences</th>
-        <th class="col-md-2"><%= Planout.instance.get[:template][:link_title]-%></th>
+        <th class="col-md-1"><%= session[:planout_data][:template][:preferences_title]-%></th>
+        <th class="col-md-2"><%= session[:planout_data][:template][:link_title]-%></th>
       </tr>
       </thead>
       <tbody>
@@ -32,14 +32,14 @@
         <td>2</td>
         <td>Comparison of BY4741 and W303 deletion mutants (nha1, ena1-4/5)</td>
         <td>Katie Jennings, Alex Draper</td>
-        <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+        <td><span class="glyphicon glyphicon-ban-circle" aria-hidden="true" alt="This is private"></span></td>
         <td></td>
       </tr>
       <tr class="danger">
         <td>3</td>
         <td>RNA-seq delta greA</td>
         <td>Alex Draper, Manuela Sanger, Ellis Leach </td>
-        <td><span class="glyphicon glyphicon-lock" aria-hidden="true" alt="This is private"></span></td>
+        <td><span class="glyphicon glyphicon-ban-circle" aria-hidden="true" alt="This is private"></span></td>
         <td></td>
       </tr>
       </tbody>
@@ -57,8 +57,8 @@
       <th class="col-md-1">Uploader</th>
       <th class="col-md-2">Dataset</th>
       <th class="col-md-3">Creators</th>
-      <th class="col-md-1">Sharing Preferences</th>
-      <th class="col-md-2"><%= Planout.instance.get[:template][:link_title]-%> </th>
+      <th class="col-md-1"><%= session[:planout_data][:template][:preferences_title]-%></th>
+      <th class="col-md-2"><%= session[:planout_data][:template][:link_title]-%> </th>
     </tr>
     </thead>
     <tbody>
@@ -68,8 +68,22 @@
     </tbody>
   </table>
 
-<div>
-<%= link_to 'Continue', frame_experiment_usability_ask_path, class:"btn btn-primary btn-lg pull-right" %>
-</div>
+<!--<div>-->
+<!--</div>-->
+
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-right" role="search">
+          <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+          <%= link_to 'Continue with Experiment', frame_experiment_usability_ask_path, class:"btn btn-danger btn-lg pull-right" %>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
 
 </div>

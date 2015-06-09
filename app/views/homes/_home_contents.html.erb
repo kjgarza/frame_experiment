@@ -13,11 +13,14 @@
 <!--</div>-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-<div class="jumbotron">
-  <h1><%= Planout.instance.get[:template][:title]-%> </h1>
-  <p><%= Planout.instance.get[:template][:header_frames]-%></p>
-</div>
+<div class="jumbotron" data-intro="Welcome, now you are in: " data-position="bottom">
+  <h1><%= session[:planout_data][:template][:title]-%> </h1>
+  <p><%= session[:planout_data][:template][:header_frames]-%></p>
 
+
+
+          <%=  session[:planout_data][:template][:title] -%>
+</div>
 
 <%= render :partial=>"home_news_feeds" -%>
 
@@ -39,4 +42,15 @@
     });
 </script>
 
+
+<script>
+    jQuery('body').chardinJs('start')
+</script>
+
+
+<style>
+    .chardinjs-show-element {
+        z-index: 99999;
+        opacity: 0.8; }
+</style>
 

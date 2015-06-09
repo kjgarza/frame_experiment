@@ -24,7 +24,7 @@
 <% if sharing_enable -%>
     <p>
       <!--KGS-->
-      <%= render :seek_partial => Planout.instance.get[:template][:sharing_form] -%>
+      <%= render :seek_partial => session[:planout_data][:template][:sharing_form] -%>
       <!--KGE-->
     </p>
 <% end -%>

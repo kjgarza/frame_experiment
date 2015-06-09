@@ -815,6 +815,7 @@ create_from_existing_sop_experimental_conditions POST   /sops/:sop_id/experiment
                         frame_experiment_debrief        /frame_experiment/debrief(.:format)                                          frame_experiment#debrief
                       frame_experiment_awareness PUT    /frame_experiment/awareness(.:format)                                        frame_experiment#awareness
                         frame_experiment_washout PUT    /frame_experiment/washout(.:format)                                          frame_experiment#washout
+                frame_experiment_washout_twelfth PUT    /frame_experiment/washout_twelfth(.:format)                                  frame_experiment#washout_twelfth
                   frame_experiment_usability_ask PUT    /frame_experiment/usability_ask(.:format)                                    frame_experiment#usability_ask
                           frame_experiment_index GET    /frame_experiment(.:format)                                                  frame_experiment#index
                                                  POST   /frame_experiment(.:format)                                                  frame_experiment#create
@@ -823,6 +824,13 @@ create_from_existing_sop_experimental_conditions POST   /sops/:sop_id/experiment
                                 frame_experiment GET    /frame_experiment/:id(.:format)                                              frame_experiment#show
                                                  PUT    /frame_experiment/:id(.:format)                                              frame_experiment#update
                                                  DELETE /frame_experiment/:id(.:format)                                              frame_experiment#destroy
+                                mental_rotations GET    /mental_rotations(.:format)                                                  mental_rotations#index
+                                                 POST   /mental_rotations(.:format)                                                  mental_rotations#create
+                             new_mental_rotation GET    /mental_rotations/new(.:format)                                              mental_rotations#new
+                            edit_mental_rotation GET    /mental_rotations/:id/edit(.:format)                                         mental_rotations#edit
+                                 mental_rotation GET    /mental_rotations/:id(.:format)                                              mental_rotations#show
+                                                 PUT    /mental_rotations/:id(.:format)                                              mental_rotations#update
+                                                 DELETE /mental_rotations/:id(.:format)                                              mental_rotations#destroy
                          feed_site_announcements GET    /site_announcements/feed(.:format)                                           site_announcements#feed
         notification_settings_site_announcements GET    /site_announcements/notification_settings(.:format)                          site_announcements#notification_settings
  update_notification_settings_site_announcements POST   /site_announcements/update_notification_settings(.:format)                   site_announcements#update_notification_settings

@@ -633,7 +633,7 @@ SEEK::Application.routes.draw do
   match 'application/resource_in_tab' => 'application#resource_in_tab'
 
   #error rendering
-  match "/404" => "errors#error_404"
+  # match "/404" => "errors#error_404"
   match "/422" => "errors#error_422"
   match "/500" => "errors#error_500"
 
@@ -654,7 +654,15 @@ SEEK::Application.routes.draw do
   match '/frame_experiment/debrief', :controller => 'frame_experiment', :action => 'debrief'
   match '/frame_experiment/awareness', :controller => 'frame_experiment', :action => 'awareness', :via=>:put
   match '/frame_experiment/washout', :controller => 'frame_experiment', :action => 'washout', :via=>:put
+  match '/frame_experiment/washout_twelfth', :controller => 'frame_experiment', :action => 'washout_twelfth', :via=>:put
   match '/frame_experiment/usability_ask', :controller => 'frame_experiment', :action => 'usability_ask', :via=>:put
   resources :frame_experiment
+
+  resources :mental_rotations
+
+
+  # unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  # end
 
 end

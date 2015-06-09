@@ -20,57 +20,103 @@
     }
 
     backward {
-        -moz-transform: rotate(-90deg);
         display: inline-block;
         font-size: 40pt;
         -moz-transform: scale(-1, 1);
         -webkit-transform: scale(-1, 1);
         transform: scale(-1, 1);
+        -moz-transform: rotate(-90deg);
     }
 </style>
 
-<p>
+<div class="jumbotron">
+  <h1>Break Exercise</h1>
+  <ol class="lead" >
+    <p>
+      Instructions will be given for the mental rotation
+      tasks first and then the memory test. Mental Rotation: In this task you
+      will see an image of a letter (F, G, J, R) or number (2, 4, 5, 7) that
+      is either "Normal" (i.e., the right way round) or is "Backwards" (i.e.,
+      a mirror-image of its normal presentation).
+    </p>
 
-In this experiment you will complete a memory test and some mental rotation tasks.
+  </ol>
+</div>
 
-Instructions will be given for the mental rotation tasks first and then the memory test.
 
-Mental Rotation:
+</div>
 
-In this task you will see an image of a letter (F, G, J, R) or number (2, 4, 5, 7) that is either "Normal" (i.e., the right way round) or is "Backwards" (i.e., a mirror-image of its normal presentation).
+<div class="row">
+  <h3>
+    Normal:
+  </h3>
 
-Normal:
+  <div class="" style="height: 100px;"><svg xmlns="http://www.w3.org/2000/svg" width="500" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55" x="40" y="60" style="stroke:none; fill:#000000;" transform="">F G J R  2 4 5 7</text>
+  </svg></div>
+</div>
 
-Backwards:
+<div class="row">
+  <h3>
+    Backwards:
+  </h3>
 
-However, to make your task more difficult the letters or numbers you see may also be rotated from their typical upright presentation.
+  <div class="" style="height: 100px;"><svg xmlns="http://www.w3.org/2000/svg" width="500" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55" x="-400" y="60" style="stroke:none; fill:#000000;" transform="scale(-1, 1)">7 5 2 4 R J G F </text>
+  </svg></div>
+</div>
 
-Your task is to decide whether an image is "Normal" or "Backwards" as quickly as possible.
+<div class="row">
+  <p>
+    However, to make your task more difficult the letters or numbers you
+    see may also be rotated from their typical upright presentation. Your
+    task is to decide whether an image is "Normal" or "Backwards" as
+    quickly as possible. Here are some examples:
+  </p>
+</div>
 
-Here are some examples:
-This G is "Normal"...
-G0
-This R is "Backwards"... (and has been rotated)
-R300r
-This J is "Normal"... (and has been rotated)
-J120
-This 2 is "Backwards"... (and has been rotated)
-TWO240r
-Now you should try a few examples....
+<div class="row">
+  <h3>
+    This G is "Normal"...
+  </h3>
 
-In between each example, a fixation point "+" will be shown in the center of the screen for 1 second.
+  <div class="col-md-4" style="height: 100px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55" x="40" y="60" style="stroke:none; fill:#000000;" transform="">G</text>
+  </svg></div>
+</div>
 
-Click 'Next' to continue...
 
-</p>
+<div class="row">
+  <h3>
+    This R is "Backwards"... (and has been rotated)
+  </h3>
 
-<p>
-  There once was a young lady with pride,<br>
-  &#x202e;who ate fourteen green apples and died.<br>
-  &#x202d;Within the lamented,<br>
-  &#x202e;the apple fermented<br>
-  &#x202d;and made cider inside her insides.
-</p>
+  <div class="col-md-4" style="height: 100px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55" x="-40" y="80" style="stroke:none; fill:#000000;" transform="scale(-1, 1) rotate(30)">R</text>
+  </svg></div>
+</div>
 
-<backward>R</backward>
 
+<div class="row">
+  <h3>
+    This J is "Normal"... (and has been rotated)
+  </h3>
+
+  <div class="col-md-4" style="height: 100px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55" x="60" y="60" style="stroke:none; fill:#000000;" transform="scale(-1, 1) rotate(120)">J</text>
+  </svg></div>
+</div>
+
+
+<div class="row">
+  <h3>
+    This 2 is "Backwards"... (and has been rotated)
+  </h3>
+
+  <div class="col-md-4" style="height: 100px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text font-size="55" x="0" y="-60" style="stroke:none; fill:#000000;" transform="scale(-1, 1) rotate(240)">2</text>
+  </svg></div>
+</div>
+
+
+<%= link_to 'Continue', next_wizard_path, id:"next_btn", class:"btn-primary btn-lg" %>

@@ -176,9 +176,13 @@ class DataFilesController < ApplicationController
       @data_file.policy.set_attributes_with_sharing params[:sharing], @data_file.projects
 
       Planout.instance.log_event('create', {
+          'sessionid' => request.session_options[:id],
+          'treatment' => session[:planout_data][:template][:title],
+          'inputs' => session[:planout_input],
+          'trial' => session[:planout_trial],
           'with_who' => params[:with_who],
           'when_to' => params[:when_to],
-          'data_file_title' => params[:data_file_title],
+          'data_file_title' => params[:data_file][:title],
       })
 
 
@@ -421,7 +425,7 @@ class DataFilesController < ApplicationController
   end
 
   def get_layout
-    Planout.instance.get[:template][:layout]
+    session[:planout_data][:template][:layout]
   end
 
 end

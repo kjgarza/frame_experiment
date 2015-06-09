@@ -1,7 +1,109 @@
+
+<script type="text/javascript">
+
+  function show_start(){
+//    var d = jQuery('input[id="with_who_3"]');
+//    var d2 = jQuery('input[id="with_who_2"]');
+//    if((d[0].checked == true) || (d2[0].checked == true)){
+//      jQuery(".cals").show();
+//      jQuery('input[name="when_to"]').each( function(){
+//        this.required = true;
+//      });
+//    }
+//    else{
+      jQuery('div[id="cals"]').show();
+//      jQuery(".cals").show();
+//      jQuery('input[name="when_to"]').each( function(){
+//        this.required = false;
+//      });
+//
+//    }
+  }
+
+</script>
+
+<style>
+  .jumbotron {
+    padding: 5px 0;
+  }
+</style>
+
 <div class="jumbotron">
   <h1>You  are going to the <%= params["website"] %> website</h1>
-  <p class="lead">Ready?</p>
-  <p><%= link_to 'Start', root_path, class:"btn btn-success btn-lg" %></p>
+  <p>You will be directed to a website to publish your 'fictional' data. This website is called: <strong><%= session[:planout_data][:template][:title] %></strong>
+  </p>
+  <ol class="lead" >
+    <li>Download  mydataset.xls from the button below and use it as your 'fictional' research data.</li>
+    <li>Click Start.</li>
+    <li>Read the Website information.</li>
+    <!--<li>Publish a data file</li>-->
+    <!--<li>You will be sent to a form. Please read it.</li>-->
+    <li>Publish your 'fictional' research data.
+
+      <!--<a  href="/mydataset.csv">-->
+        <!--<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> mydataset.csv as a sample.-->
+      <!--</a>-->
+
+    </li>
+    <!--<li>Read your feedback.</li>-->
+  </ol>
+  <p>Click the <strong>Help</strong> button if you need more instructions</p>
+
+
 </div>
 
+<div class="container">
+
+  <div class="row lead"><p><strong>Remember...</strong></p></div>
+
+  <div class="row">
+    <div class="col-md-3"><img src="/scenario_4" alt="Smiley face" width="70%"></div>
+    <div class="col-md-3"><img src="/scenario_1.png" alt="Smiley face" width="50%"></div>
+    <div class="col-md-3"><img src="/publishing.gif" alt="Smiley face"></div>
+    <div class="col-md-3"><img src="/scenario_2.png" alt="Smiley face" width="50%"></div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-3 lead middle">There is a 80% chance that competitors will look at your data as soon as is open access.</div>
+    <div class="col-md-3 lead middle"><p>You are Dr. Alex Draper, a Scientist participating in an International European collaboration.</p></div>
+    <div class="col-md-3 lead middle">You and your collaborators just published a paper on your research.</div>
+    <div class="col-md-3 lead middle">Your institution or funding body has requested you and your collaborators publish your research data online.</div>
+  </div>
+
+
+  <!--<div class="row">-->
+    <!--<div class="col-xs-6 col-md-4 lead middle"><strong>Imagine</strong> that your institution or funding body has requested that you and your collaborators publish your research data online once you have published your paper.</div>-->
+    <!--<div class="col-xs-6 col-md-4"><img src="/scenario_2.png" alt="Smiley face" width="50%"></div>-->
+    <!--<div class="col-xs-6 col-md-4"></div>-->
+  <!--</div>-->
+
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-2">
+  <p class="lead"><strong>Ready?</strong></p>
+</div>
+  <div class="col-md-4">
+  <a  href="/mydataset.xls" >
+  <button type="button" class="btn btn-danger btn-lg" onclick="show_start();">
+    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download mydataset.xls
+  </button>
+</a>
+    </div>
+
+  <div class="col-md-6" id="cals" style="display:none;">
+    <p><%= link_to 'Start', home_path, class:"btn btn-success btn-lg" %></p>
+  </div>
+
+
+</div>
+<br>
+
+<!--<div class="row" id="cals" style="display:none;" >-->
+  <!--<p><%= link_to 'Start', root_path, class:"btn btn-success btn-lg" %></p>-->
+<!--</div>-->
 

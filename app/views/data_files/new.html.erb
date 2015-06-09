@@ -1,5 +1,6 @@
 
-<% @page_title ||= "New #{t('data_file')}" %>
+<% @page_title ||= session[:planout_data][:template][:upload_title] %>
+
 <h1><%= @page_title %></h1>
 <% all_institutions = Institution.order(:title) %>
 <div class="show_basic">
@@ -77,7 +78,7 @@
 
         <p>
           <%= preview_permission_popup_link(@data_file)-%>
-          <%= submit_tag Planout.instance.get[:template][:secondary_btn], :id => "data_file_submit_btn", :class=>"btn btn-primary btn-lg", :onclick => "javascript: validateResourceFields(true,'data_file',true); return(false);" -%>
+          <%= submit_tag session[:planout_data][:template][:secondary_btn], :id => "data_file_submit_btn", :class=>"btn btn-primary btn-lg", :onclick => "javascript: validateResourceFields(true,'data_file',true); return(false);" -%>
         </p>
     </div>
     <% end -%>

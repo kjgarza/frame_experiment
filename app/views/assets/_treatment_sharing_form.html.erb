@@ -12,24 +12,12 @@
 
 <script type="text/javascript">
 
-//    jQuery('#with_who_3_label').on('click', function () {
-//        alert("Hello\nHow are you?");
-//        var d = jQuery('input[id="with_who_3"]');
-//
-//    if(d[0].checked){
-//        jQuery(".cals").show();
-//    }
-//    else{
-//        jQuery(".cals").hide();
-//    }
-//    });
-
-//    jQuery('#with_who_3_label').on('click', hidewhen_to);
-
     function hidewhen_to(){
         var d = jQuery('input[id="with_who_3"]');
         var d2 = jQuery('input[id="with_who_2"]');
-        if((d[0].checked == true) || (d2[0].checked == true)){
+        var d4 = jQuery('input[id="with_who_4"]');
+//        if((d[0].checked == true) || (d2[0].checked == true)){
+        if((d[0].checked == true) || (d2[0].checked == true) || (d4[0].checked == true)){
             jQuery(".cals").show();
             jQuery('input[name="when_to"]').each( function(){
                 this.required = true;
@@ -44,18 +32,8 @@
         }
     }
 
-//    jQuery('#with_who_1_label').on('click', showwhen_to);
-
-//    jQuery('#with_who_2_label').on('click', showwhen_to);
-
-//    function showwhen_to(){
-//        var d = jQuery('input[id="with_who_3"]');
-//        if(d[0].checked != true){
-//            jQuery(".cals").hide();
-//        }
-//    }
-
 </script>
+
 
 <%# this hidden input will submit all permission data with the form -%>
 <%= hidden_field_tag "sharing[permissions][contributor_types]", "" -%>
@@ -63,20 +41,21 @@
 
 <%="<div class='fieldWithErrors'>" if !@resource.errors.empty? and !@policy.valid? %>
 
+<h4> Select citing preferences: </h4>
 
 <div class="panel panel-default">
 <div class="panel-body">
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">-->
 
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
 
 <!--<div class="container">-->
 
-<h4> Who can reference my data-set? </h4>
+<h4> Who can cite/reference this data-set now? </h4>
 <div class="row">
   <div class="col-md-3">
     <div class="alert alert-info">
@@ -90,13 +69,20 @@
   <div class="col-md-6">
     <div class="btn-group btn-group-lg btn-group-justified btn-group-fill-height" data-toggle="buttons">
       <label id="with_who_1_label"  class="btn btn-primary" style="margin-bottom:4px; white-space:normal; text-align: center; ">
-        <input  name="with_who" value="public"  onchange="hidewhen_to();" type="radio" id="with_who_1"  required >All visitors can cite me
+        <input  name="with_who" value="public"  onchange="hidewhen_to();" type="radio" id="with_who_1"  required >
+        <%=  session[:planout_data][:template][:with_who_options][0] %>
+      </label>
+      <label id="with_who_4_label"   class="btn btn-primary" style="margin-bottom:4px; white-space:normal;">
+        <input name="with_who" onchange="hidewhen_to();" value="stakeholders" type="radio" id="with_who_4"  required >
+        <%=  session[:planout_data][:template][:with_who_options][1] %>
       </label>
       <label id="with_who_2_label"   class="btn btn-primary" style="margin-bottom:4px; white-space:normal;">
-        <input name="with_who" onchange="hidewhen_to();" value="collaborators" type="radio" id="with_who_2"  required >Collaborators and me can reference
+        <input name="with_who" onchange="hidewhen_to();" value="collaborators" type="radio" id="with_who_2"  required >
+        <%=  session[:planout_data][:template][:with_who_options][2] %>
       </label>
       <label id="with_who_3_label"  class="btn btn-primary" style="margin-bottom:4px; white-space:normal; ">
-        <input name="with_who" onchange="hidewhen_to();" value="private" type="radio" id="with_who_3"  required >Nobody can cite me (only visible to me)
+        <input name="with_who" onchange="hidewhen_to();" value="private" type="radio" id="with_who_3"  required >
+        <%=  session[:planout_data][:template][:with_who_options][3] %>
       </label>
     </div>
   </div>
@@ -108,7 +94,7 @@
 
 
 <div class="cals" style="display:none;">
-  <h4> When should my data-set be citable by all visitors? </h4>
+  <h4> When should this data-set be accessible to the Public for citation? </h4>
 
   <div class="col-md-3">
     <div class="alert alert-warning">
@@ -122,16 +108,24 @@
   <div class="col-md-6">
     <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
       <label class="btn btn-warning" style="margin-bottom:4px; white-space:normal;">
-        <input name="when_to" value="6" type="radio" >6 months <sub>(<%= Date.today + 180.day %>)</sub>  <strong>                                           </strong>
+        <input name="when_to" value="6m" type="radio" >
+        <%=  session[:planout_data][:template][:when_options][0] %>
+        <sub>(<%= Date.today + 180.day %>)</sub>  <strong>    </strong>                                      </strong>
       </label>
       <label class="btn btn-warning" style="margin-bottom:4px; white-space:normal;">
-        <input name="when_to" value="1" type="radio" >1 year <sub>(<%= Date.today + 365.day %>)</sub>  <strong>     </strong>
+        <input name="when_to" value="1y" type="radio" >
+        <%=  session[:planout_data][:template][:when_options][1] %>
+        <sub>(<%= Date.today + 365.day %>)</sub>  <strong>    </strong>
       </label>
       <label class="btn btn-warning" style="margin-bottom:4px; white-space:normal; text-align: center; ">
-        <input name="when_to" value="3"  type="radio" >3 years <sub>(<%= Date.today + 1095.day %>)</sub>  <strong>      </strong>
+        <input name="when_to" value="3y"  type="radio" >
+        <%=  session[:planout_data][:template][:when_options][2] %>
+        <sub>(<%= Date.today + 1095.day %>)</sub>  <strong>      </strong>
       </label>
       <label class="btn btn-warning" style="margin-bottom:4px; white-space:normal; ">
-        <input name="when_to" value="10" type="radio" >10 years <sub>(<%= Date.today + 3650.day %>)</sub>   <strong>        </strong>
+        <input name="when_to" value="10y" type="radio" >
+        <%=  session[:planout_data][:template][:when_options][3] %>
+        <sub>(<%= Date.today + 3650.day %>)</sub>   <strong>       </strong>
       </label>
     </div>
   </div>

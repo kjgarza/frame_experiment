@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141123180701) do
+ActiveRecord::Schema.define(:version => 20150107160112) do
 
   create_table "activity_logs", :force => true do |t|
     t.string   "action"
@@ -808,6 +808,8 @@ ActiveRecord::Schema.define(:version => 20141123180701) do
     t.integer  "when_best"
     t.integer  "frequency"
     t.integer  "updating"
+    t.integer  "man_hours"
+    t.boolean  "tongue"
   end
 
   create_table "people", :force => true do |t|

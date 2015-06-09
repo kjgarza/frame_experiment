@@ -99,7 +99,7 @@ class HomesController < ApplicationController
 
 
   def get_layout
-    Planout.instance.get[:template][:layout]
+    session[:planout_data][:template][:layout]
   end
 
 
