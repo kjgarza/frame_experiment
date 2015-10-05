@@ -122,6 +122,9 @@ class FrameExperimentController < ApplicationController
 
   end
 
+  def download
+    send_file 'mydataset.xls', :type => 'application/vnd.ms-excel', :disposition => 'attachment', :filename=>'something.mp3', :x_sendfile=>true
+  end
 
   def usability_ask
 

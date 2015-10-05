@@ -656,6 +656,7 @@ SEEK::Application.routes.draw do
   match '/frame_experiment/washout', :controller => 'frame_experiment', :action => 'washout', :via=>:put
   match '/frame_experiment/washout_twelfth', :controller => 'frame_experiment', :action => 'washout_twelfth', :via=>:put
   match '/frame_experiment/usability_ask', :controller => 'frame_experiment', :action => 'usability_ask', :via=>:put
+  get "frame_experiment/download"
   resources :frame_experiment
 
   resources :mental_rotations

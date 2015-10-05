@@ -294,11 +294,12 @@ gem "json"; require "json"
     def configure_logger()
       filename = "" + self.class.name.split('::').last + ""
       # @logger = Logger.new(STDOUT)
-      @logger = Logger.new(filename)
+      @logger = Logger.new("#{Rails.root}/public/"+filename)
       #@loger.level = Logger::WARN
       @logger.formatter = proc do
       |severity, datetime, progname, msg|
-        "logged data: #{msg}\n"
+        " #{msg}\n"
+        # "logged data: #{msg}\n"
       end
     end
 
@@ -364,21 +365,24 @@ class FrameExperiment < SimpleExperiment
   def assign(params, **inputs)
     sessionid = inputs[:sessionid]
     # userid = inputs[:userid]
+    man_hours = inputs[:man_hours]
     discipline = inputs[:discipline]
     materials_type = inputs[:materials_type]
     year_born = inputs[:year_born]
     howmany = inputs[:howmany]
-    by = inputs[:by]
+    ways = inputs[:ways]
     when_best = inputs[:when_best]
     frequency = inputs[:frequency]
-    update = inputs[:update]
+    updating = inputs[:updating]
+    trial = inputs[:trial]
     # ops = ["control", "treatment"]
     # ops = ["normal.html", "framed.html"]
-    initials = [sessionid,discipline,materials_type,year_born,howmany, by,when_best,frequency,update ]
+    initials = [sessionid,discipline,materials_type,year_born,howmany, ways,when_best,frequency,updating,man_hours,trial ]
 
     treatment = {
         :title => "cite DataLabour",
         :name => "TREATMENT",
+        :preferences_title => "Citation Preferences",
         :header_frames => "Control and make your data citable.",
         :searchfade_repeat => 'searchfade-treatment.jpg',
         :primary_btn => "Create",
@@ -391,12 +395,25 @@ class FrameExperiment < SimpleExperiment
         :primary_btn_title => 'Create citable data',
         :layout => "application",
         :link_title => "Cite with",
+        :upload_title => "New Citable Datafile",
+        :help => "frame_experiment/treatment_help",
         :discipline => discipline,
+        :with_who_options => [
+            "Public can cite",
+            "People involved in my projects can reference",
+            "Collaborators can reference",
+            "Nobody, Keep it Private"],
+        :when_options => [
+            "in 6 Months",
+            "in 1 Year",
+            "in 3 Years",
+            "in 10 Years"],
     }
 
     control = {
         :title => "Jam Share Data",
         :name => "CONTROL",
+        :preferences_title => "Sharing Preferences",
         :header_frames => "Find, share and exchange Data, Models and Processes within the Community",
         :searchfade_repeat => 'searchfade-control.jpg',
         :primary_btn => "Upload",
@@ -409,7 +426,14 @@ class FrameExperiment < SimpleExperiment
         :primary_btn_title  => 'New data upload',
         :layout => "application_bootstrap",
         :link_title => "Share with",
+        :upload_title => "New Datafile for Sharing",
+        :help => "frame_experiment/control_help",
         :discipline => discipline,
+        :with_who_options => [
+            "Share with the Public",
+            "Share with People involved in my projects",
+            "Share with my Collaborators",
+            "Nobody, Keep it Private"],
     }
 
     # treatments = {:control =>control, :treatment=> treatment}
@@ -432,14 +456,17 @@ class Planout
 
   def initialize
     @output = []
+    @inputs = []
     @one = []
     @trial_number = 0
   end
 
   attr_reader :output
 
+
   def info(**inputs)
     @framing_exp = FrameExperiment.new(inputs)
+    @inputs = inputs
     @output = @framing_exp.get_params()
     @output[:template] = @output[:template1]
   end
@@ -457,7 +484,6 @@ class Planout
     if number < 1
       @output[:template] = @output[:template1]
     end
-
   end
 
   def get_trial_number
@@ -466,6 +492,10 @@ class Planout
 
   def get
     @output ||= []
+  end
+
+  def get_inputs
+    @inputs ||= []
   end
 
   def log_event(event_type, extras = nil)
