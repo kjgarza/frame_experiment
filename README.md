@@ -1,19 +1,12 @@
-# SEEK
+# SEEK4Science TestBed for Choice Architecture
 
-* [SEEK for Science](http://www.seek4science.org/) 
-* [README](http://seek4science.org/sites/default/files/seekdocs/doc/README.html)
 
-## License
 
-Copyright (c) 2009-2014, University of Manchester and HITS gGmbH
 
-* [BSD 3-clause](BSD-LICENSE)
+This is a Modified version of [SEEK for Science](http://www.seek4science.org/) used as a testbed for Choice Architecture techniques. The versions runs as a Web Experiment rather than a SEEK4Science implementation. Details of the Choice Architecture techniques can be found in [
+Framing the community data system interface
+](http://dl.acm.org/citation.cfm?doid=2783446.2783605).
 
-## Installation
-
-See the
-[SEEK install guide](http://seek4science.org/sites/default/files/seekdocs/doc/INSTALL.html)
-and the [inluded documentation](doc).
 
 
 ## Credit
