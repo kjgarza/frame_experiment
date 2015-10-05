@@ -11,7 +11,4 @@ Framing the community data system interface
 
 ## Credit
 
-SEEK is developed using the [RubyMine IDE](http://www.jetbrains.com/ruby/), for which we are provided a free open source license by JetBrains.
-
-![JetBrains](http://seek4science.org/sites/default/files/logo_jetbrains_smaller.gif)
-
+Garza, Kristian, Carole Goble, John Brooke, and Caroline Jay. 2015. *“Framing the Community Data System Interface.”* In Proceedings of the 2015 British HCI Conference on - British HCI ’15, 269–70. New York, New York, USA: ACM Press. doi:10.1145/2783446.2783605.
